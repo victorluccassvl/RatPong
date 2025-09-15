@@ -168,7 +168,8 @@ MonoBehaviour:
   collider: {fileID: 176289187}
   physicsEventForward: {fileID: 176289189}
   MaxSpeed: 2
-  InitialSpeed: 2
+  MinSpeed: 0
+  initialSpeed: 2
 --- !u!1 &84241690
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +370,8 @@ MonoBehaviour:
   collider: {fileID: 1445146036}
   physicsEventForward: {fileID: 1445146038}
   MaxSpeed: 2
-  InitialSpeed: 2
+  MinSpeed: 0
+  initialSpeed: 2
 --- !u!1 &176289184
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +589,8 @@ MonoBehaviour:
   collider: {fileID: 1736119399}
   physicsEventForward: {fileID: 1736119401}
   MaxSpeed: 2
-  InitialSpeed: 2
+  MinSpeed: 0
+  initialSpeed: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,7 +873,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 9999
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -953,7 +956,8 @@ MonoBehaviour:
   collider: {fileID: 738219951}
   physicsEventForward: {fileID: 738219953}
   MaxSpeed: 2
-  InitialSpeed: 2
+  MinSpeed: 0
+  initialSpeed: 2
 --- !u!1 &738219948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,7 +1459,8 @@ MonoBehaviour:
   collider: {fileID: 1962671066}
   physicsEventForward: {fileID: 1962671068}
   MaxSpeed: 2
-  InitialSpeed: 2
+  MinSpeed: 0
+  initialSpeed: 2
 --- !u!1 &1445146033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,7 +2284,8 @@ MonoBehaviour:
   collider: {fileID: 1737580093}
   physicsEventForward: {fileID: 1737580095}
   MaxSpeed: 2
-  InitialSpeed: 2
+  MinSpeed: 0
+  initialSpeed: 2
 --- !u!1 &1952643926
 GameObject:
   m_ObjectHideFlags: 0

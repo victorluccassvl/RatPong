@@ -11,7 +11,8 @@ public class Ball : MonoBehaviour
     [SerializeField, Child] private PhysicsEventForward physicsEventForward;
 
     [field: SerializeField] public float MaxSpeed;
-    [field: SerializeField] private float InitialSpeed;
+    [field: SerializeField] public float MinSpeed;
+    [SerializeField] private float initialSpeed;
 
     public static Ball GetBall(Collider2D collider)
     {
@@ -22,7 +23,7 @@ public class Ball : MonoBehaviour
     private void Awake()
     {
         ballColliders.Add(collider, this);
-        RB.AddForce(InitialSpeed * new Vector2(Random.value * 2f - 1f, Random.value * 2f - 1f).normalized, ForceMode2D.Impulse);
+        RB.AddForce(initialSpeed * new Vector2(Random.value * 2f - 1f, Random.value * 2f - 1f).normalized, ForceMode2D.Impulse);
 
         physicsEventForward.OnTriggerEnter2DEvent += RegisterKillZoneEntry;
     }

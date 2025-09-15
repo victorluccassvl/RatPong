@@ -93,7 +93,7 @@ public class PlayerBar : MonoBehaviour
 
     private Vector2 GetDeflectionDirection(float deflectionAngleCos)
     {
-        float deflectedAngleCos = deflectionAngleCos * minDeflectionAngleCos;//Mathf.Clamp(deflectionAngleCos, -minDeflectionAngleCos, minDeflectionAngleCos);
+        float deflectedAngleCos = deflectionAngleCos * minDeflectionAngleCos;
         return new Vector2(deflectedAngleCos, 1 - deflectedAngleCos * deflectedAngleCos).normalized;
     }
 }
