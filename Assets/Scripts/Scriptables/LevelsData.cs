@@ -7,8 +7,8 @@ using System.Text;
 [CreateAssetMenu(fileName = "LevelsData", menuName = "Scriptable Objects/LevelsData")]
 public class LevelsData : ScriptableObject
 {
-    public const int LEVEL_GRID_SIZE_COLUMNS = 20;
-    public const int LEVEL_GRID_SIZE_LINES = 12;
+    public const int LEVEL_GRID_SIZE_COLUMNS = 12;
+    public const int LEVEL_GRID_SIZE_LINES = 8;
 
     public List<LevelData> levels;
 

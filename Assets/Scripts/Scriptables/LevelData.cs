@@ -2,20 +2,19 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using System.Text;
 
 [CreateAssetMenu(fileName = "LevelData", menuName = "Scriptable Objects/LevelData")]
 [Serializable]
 public class LevelData : ScriptableObject, ISerializationCallbackReceiver
 {
+    public const string LEVEL_DATA_ASSET_PREFIX = "LevelData_";
+    public const string LEVEL_DATA_ID_PREFIX = "Level_";
+
     public bool enabled;
     public string ID;
 
     public TilesData.TileData[,] tiles = null;
-    public List<TilesData.TileData> tilesSerialized = null;
-
-    public int[,] teste = null;
-    public List<int> testeS = null;
+    [SerializeField, HideInInspector] private List<TilesData.TileData> tilesSerialized = null;
 
     public void OnAfterDeserialize()
     {
@@ -31,10 +30,7 @@ public class LevelData : ScriptableObject, ISerializationCallbackReceiver
 
     public void OnBeforeSerialize()
     {
-        if (tiles == null)
-        {
-            tiles = new TilesData.TileData[LevelsData.LEVEL_GRID_SIZE_COLUMNS, LevelsData.LEVEL_GRID_SIZE_LINES];
-        }
+        if (tiles == null) tiles = new TilesData.TileData[LevelsData.LEVEL_GRID_SIZE_COLUMNS, LevelsData.LEVEL_GRID_SIZE_LINES];
 
         tilesSerialized = new();
 
@@ -46,20 +42,6 @@ public class LevelData : ScriptableObject, ISerializationCallbackReceiver
             }
         }
     }
-
-    public void PrintData()
-    {
-        StringBuilder print = new();
-        for (int i = 0; i < LevelsData.LEVEL_GRID_SIZE_COLUMNS; i++)
-        {
-            for (int j = 0; j < LevelsData.LEVEL_GRID_SIZE_LINES; j++)
-            {
-                print.Append(teste[i, j]);
-            }
-            print.AppendLine();
-        }
-        Debug.LogError(print.ToString());
-    }
 }
 
 [CustomEditor(typeof(LevelData))]
@@ -69,8 +51,6 @@ public class LevelDataEditor : Editor
     {
         DrawDefaultInspector();
 
-        LevelData myScript = (LevelData)target;
-
-        if (GUILayout.Button("Print Data")) myScript.PrintData();
+        //LevelData myScript = (LevelData)target;
     }
 }

@@ -7,42 +7,29 @@ public class EditableTile : MonoBehaviour
 {
     [SerializeField, Self] private Button button;
 
-    private TilesData.TileData currentTile;
+    public TilesData.TileData CurrentTile { get; private set; }
     private int column;
     private int line;
 
     public Action<EditableTile, int, int> OnTileSelected = delegate { };
 
-    public void Onable()
-    {
-        button.onClick.AddListener(OnClick);
-    }
+    public void OnClick() => OnTileSelected(this, column, line);
 
-    public void OnDisable()
+    public void Setup(int column, int line, TilesData.TileData tileData)
     {
-        button.onClick.RemoveListener(OnClick);
-    }
-
-    private void OnClick() => OnTileSelected(this, column, line);
-
-    public void Setup(Vector2 size, int column, int line, TilesData.TileData tileData)
-    {
-        currentTile = tileData;
+        CurrentTile = tileData;
 
         this.line = line;
         this.column = column;
 
         gameObject.name = $"Tile[{column}][{line}]";
 
-        if (currentTile == null || currentTile.levelEditorRepresentation == null)
-        {
-            //button.image.sprite = null;
-            // button.image.color = Color.clear;
-        }
-        else
-        {
-            button.image.sprite = currentTile.levelEditorRepresentation;
-            button.image.color = Color.white;
-        }
+        Setup(tileData);
+    }
+
+    public void Setup(TilesData.TileData tileData)
+    {
+        CurrentTile = tileData;
+        button.image.sprite = CurrentTile?.levelEditorRepresentation;
     }
 }
