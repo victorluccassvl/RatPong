@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using KBCore.Refs;
+using System;
 
 public class Ball : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Ball : MonoBehaviour
     [field: SerializeField] public float MinSpeed;
     [SerializeField] private float initialSpeed;
 
+    public Action<Ball> OnBallDestroyed = delegate { };
+
     public static Ball GetBall(Collider2D collider)
     {
         if (!ballColliders.ContainsKey(collider)) return null;
@@ -23,7 +26,7 @@ public class Ball : MonoBehaviour
     private void Awake()
     {
         ballColliders.Add(collider, this);
-        RB.AddForce(initialSpeed * new Vector2(Random.value * 2f - 1f, Random.value * 2f - 1f).normalized, ForceMode2D.Impulse);
+        RB.AddForce(initialSpeed * Vector2.up, ForceMode2D.Impulse);
 
         physicsEventForward.OnTriggerEnter2DEvent += RegisterKillZoneEntry;
     }
@@ -32,6 +35,8 @@ public class Ball : MonoBehaviour
     {
         ballColliders.Remove(collider);
         physicsEventForward.OnTriggerEnter2DEvent -= RegisterKillZoneEntry;
+
+        OnBallDestroyed(this);
     }
 
     private void RegisterKillZoneEntry(Collider2D other)

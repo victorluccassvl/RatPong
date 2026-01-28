@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System.Text;
 
 [CreateAssetMenu(fileName = "LevelData", menuName = "Scriptable Objects/LevelData")]
-[Serializable]
 public class LevelData : ScriptableObject, ISerializationCallbackReceiver
 {
     public const string LEVEL_DATA_ASSET_PREFIX = "LevelData_";
@@ -14,17 +14,18 @@ public class LevelData : ScriptableObject, ISerializationCallbackReceiver
     public string ID;
 
     public TilesData.TileData[,] tiles = null;
-    [SerializeField, HideInInspector] private List<TilesData.TileData> tilesSerialized = null;
+    [SerializeField] private List<TilesData.TileData> tilesSerialized = null;
+    [SerializeField] private List<Vector2Int> tilesSerializedPosition = null;
 
     public void OnAfterDeserialize()
     {
         tiles = new TilesData.TileData[LevelsData.LEVEL_GRID_SIZE_COLUMNS, LevelsData.LEVEL_GRID_SIZE_LINES];
-        for (int i = 0; i < tiles.GetLength(0); i++)
+
+        if (tilesSerialized == null) return;
+
+        for (int i = 0; i < tilesSerialized.Count; i++)
         {
-            for (int j = 0; j < tiles.GetLength(1); j++)
-            {
-                tiles[i, j] = tilesSerialized[i * LevelsData.LEVEL_GRID_SIZE_LINES + j];
-            }
+            tiles[tilesSerializedPosition[i].x, tilesSerializedPosition[i].y] = tilesSerialized[i];
         }
     }
 
@@ -33,24 +34,27 @@ public class LevelData : ScriptableObject, ISerializationCallbackReceiver
         if (tiles == null) tiles = new TilesData.TileData[LevelsData.LEVEL_GRID_SIZE_COLUMNS, LevelsData.LEVEL_GRID_SIZE_LINES];
 
         tilesSerialized = new();
+        tilesSerializedPosition = new();
 
-        for (int i = 0; i < tiles.GetLength(0); i++)
+        for (int column = 0; column < tiles.GetLength(0); column++)
         {
-            for (int j = 0; j < tiles.GetLength(1); j++)
+            for (int line = 0; line < tiles.GetLength(1); line++)
             {
-                tilesSerialized.Add(tiles[i, j]);
+                if (tiles[column, line] == null) continue;
+                tilesSerialized.Add(tiles[column, line]);
+                tilesSerializedPosition.Add(new Vector2Int(column, line));
             }
         }
     }
 }
 
-[CustomEditor(typeof(LevelData))]
+[CustomEditor(typeof(LevelData)), CanEditMultipleObjects]
 public class LevelDataEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
-        //LevelData myScript = (LevelData)target;
+        LevelData myScript = (LevelData)target;
     }
 }

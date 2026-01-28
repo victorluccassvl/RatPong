@@ -15,4 +15,4 @@ MonoBehaviour:
   tilesData:
   - variant: 0
     levelEditorRepresentation: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    prefab: {fileID: 7097220397477449460, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}

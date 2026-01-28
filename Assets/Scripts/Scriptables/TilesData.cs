@@ -10,7 +10,7 @@ public class TilesData : ScriptableObject
     {
         [HideInInspector] public Tile.Variant variant;
         public Sprite levelEditorRepresentation;
-        public Tile prefab;
+        public GameObject prefab;
     }
 
     public List<TileData> tilesData;
@@ -26,7 +26,7 @@ public class TilesData : ScriptableObject
         foreach (TileData tileData in tilesData)
         {
             if (tileData == null) continue;
-            tileData.variant = tileData.prefab.variant;
+            tileData.variant = tileData.prefab.GetComponent<Tile>().variant;
             if (tilesData.Exists(otherTile => otherTile.variant == tileData.variant && tileData != otherTile))
             {
                 Debug.LogError("Tile Datas contain two tiles with same associated variant, one will may be ignored");

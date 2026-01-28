@@ -30,6 +30,7 @@ public class EditableTile : MonoBehaviour
     public void Setup(TilesData.TileData tileData)
     {
         CurrentTile = tileData;
+
         button.image.sprite = CurrentTile?.levelEditorRepresentation;
     }
 }

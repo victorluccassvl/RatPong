@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using UnityEditor;
 using TMPro;
+using System;
 
 public class LevelEditor : MonoBehaviour
 {
@@ -43,6 +44,10 @@ public class LevelEditor : MonoBehaviour
     [SerializeField] private GridLayoutGroup pickerGrid;
     [SerializeField] private TilePickerOption pickerOptionTemplate;
     [SerializeField] private TextMeshProUGUI currentPickedLabel;
+
+    [Header("PopUp")]
+    [SerializeField] private ConfirmationPopUp confirmationPopUp;
+
 
     private EditableTile[,] editableTiles = null;
     private List<TilePickerOption> pickerOptions = new();
@@ -109,13 +114,18 @@ public class LevelEditor : MonoBehaviour
         if (currentLevelData == null) return;
         if (!AssertLevelsDataPathExists()) return;
 
-        string levelToDeleteID = currentLevelData.ID;
-        AssetDatabase.DeleteAsset($"{levelsFolderPath}\\{currentLevelData.name}.asset");
-        UpdateLevelsData();
-        UpdateLevelOptions();
-        OnLevelSelect(0);
+        Action confirmDeletion = delegate
+        {
+            string levelToDeleteID = currentLevelData.ID;
+            AssetDatabase.DeleteAsset($"{levelsFolderPath}\\{currentLevelData.name}.asset");
+            UpdateLevelsData();
+            UpdateLevelOptions();
+            OnLevelSelect(0);
 
-        DisplayOperationFeedback(OperationFeedback.LevelDeleted, levelToDeleteID);
+            DisplayOperationFeedback(OperationFeedback.LevelDeleted, levelToDeleteID);
+        };
+
+        confirmationPopUp.Open($"Are you sure you want to delete level {currentLevelData.ID}?", confirmDeletion, null);
     }
 
     private void OnCreate()
@@ -124,6 +134,7 @@ public class LevelEditor : MonoBehaviour
 
         LevelData newLevel = ScriptableObject.CreateInstance<LevelData>();
         newLevel.ID = $"{LevelData.LEVEL_DATA_ID_PREFIX}{createField.text}";
+        newLevel.enabled = true;
         AssetDatabase.CreateAsset(newLevel, $"{levelsFolderPath}\\{LevelData.LEVEL_DATA_ASSET_PREFIX}{createField.text}.asset");
 
         UpdateLevelsData();
@@ -186,7 +197,7 @@ public class LevelEditor : MonoBehaviour
 
         foreach (string levelPath in levelPaths)
         {
-            Object levelDataObject = AssetDatabase.LoadAssetAtPath<Object>(levelPath);
+            UnityEngine.Object levelDataObject = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(levelPath);
 
             if (levelDataObject is LevelData levelData)
             {
