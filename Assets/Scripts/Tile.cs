@@ -69,7 +69,7 @@ public class Tile : MonoBehaviour
 
     private void UpdateVisuals()
     {
-        float percentage = 1f - (hitsReceived / ((float)hitsToBreak - 1));
+        float percentage = 1f - (hitsReceived / ((float)hitsToBreak));
         renderer.color = new Color(percentage, percentage, percentage);
     }
 

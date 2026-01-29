@@ -3758,8 +3758,8 @@ MonoBehaviour:
     m_Top: 5
     m_Bottom: 5
   m_ChildAlignment: 0
-  m_StartCorner: 0
-  m_StartAxis: 0
+  m_StartCorner: 2
+  m_StartAxis: 1
   m_CellSize: {x: 35, y: 20}
   m_Spacing: {x: 2, y: 2}
   m_Constraint: 1

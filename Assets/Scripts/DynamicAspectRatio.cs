@@ -30,6 +30,8 @@ public class DynamicAspectRatio : MonoBehaviour
     public void UpdateCameraRect()
     {
         float currentScreenAspect = Screen.width / (float)Screen.height;
+        if (Mathf.Approximately(currentScreenAspect, targetAspectRatio.x / targetAspectRatio.y)) return;
+
         float scale = currentScreenAspect / (targetAspectRatio.x / targetAspectRatio.y);
 
         if (scale < 1f) camera.rect = new Rect(0, 1f, 1f, scale);

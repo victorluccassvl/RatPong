@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -64,6 +63,7 @@ public class GameManager : MonoBehaviour
                 Tile newTile = Instantiate(tile.prefab, tilesSpace.transform).GetComponent<Tile>();
                 Vector2Int gridPosition = new Vector2Int(column, line);
                 newTile.Setup(gridPosition, tilesSpace);
+                newTile.OnTileDestroyed += OnTileDestroyed;
 
                 tiles[column, line] = newTile;
             }

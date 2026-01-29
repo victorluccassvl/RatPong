@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class MainMenu : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class MainMenu : MonoBehaviour
     public void CloseGame()
     {
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.ExitPlaymode();
+        EditorApplication.ExitPlaymode();
 #else
     Application.Quit();
 #endif
@@ -34,11 +35,26 @@ public class MainMenu : MonoBehaviour
             LevelData level = levelsData.levels[i];
             if (!level.enabled) continue;
 
-            bool completed = PlayerPrefs.GetString(level.ID) != string.Empty;
+            bool completed = PlayerPrefs.GetString(level.ID, "NotFound") != "NotFound";
 
             LevelSelectButton newLevelButton = Instantiate(levelButtonPrefab, levelsScrollRect.content);
             newLevelButton.Setup(level, i + 1, completed);
             newLevelButton.gameObject.SetActive(true);
+        }
+    }
+}
+
+[CustomEditor(typeof(MainMenu))]
+public class MainMenuEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+
+        if (GUILayout.Button("Delete Player Preferences"))
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
         }
     }
 }

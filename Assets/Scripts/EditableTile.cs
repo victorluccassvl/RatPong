@@ -22,7 +22,7 @@ public class EditableTile : MonoBehaviour
         this.line = line;
         this.column = column;
 
-        gameObject.name = $"Tile[{column}][{line}]";
+        gameObject.name = $"Tile[{line}][{column}]";
 
         Setup(tileData);
     }

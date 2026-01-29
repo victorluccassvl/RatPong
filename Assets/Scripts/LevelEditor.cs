@@ -252,7 +252,7 @@ public class LevelEditor : MonoBehaviour
                 for (int line = 0; line < LevelsData.LEVEL_GRID_SIZE_LINES; line++)
                 {
                     EditableTile newTile = Instantiate(tileTemplate, tilesGrid.transform);
-                    newTile.Setup(line, column, currentLevelData.tiles[column, line]);
+                    newTile.Setup(column, line, currentLevelData.tiles[column, line]);
                     newTile.OnTileSelected += OnTileInteract;
                     editableTiles[column, line] = newTile;
                 }
