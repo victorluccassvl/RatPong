@@ -6,7 +6,7 @@ public class DynamicAspectRatio : MonoBehaviour
     [SerializeField] private Vector2 targetAspectRatio;
     [SerializeField, Self] private new Camera camera;
 
-    public void Start()
+    public void OnEnable()
     {
         UpdateCameraRect();
     }

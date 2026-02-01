@@ -25,7 +25,6 @@ public class Ball : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Break();
         ballColliders.Add(collider, this);
         RB.AddForce(initialSpeed * Vector2.up, ForceMode2D.Impulse);
 
