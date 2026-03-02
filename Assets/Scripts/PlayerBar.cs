@@ -4,9 +4,11 @@ using KBCore.Refs;
 
 public class PlayerBar : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField, Self] private Rigidbody2D RB;
     [SerializeField] private Transform barTransform;
 
+    [Header("General Settings")]
     [SerializeField] private float maxMoveSpeed;
     [SerializeField] private float acceleration;
     [SerializeField] private float minDeflectionAngleInDegrees;
@@ -14,20 +16,64 @@ public class PlayerBar : MonoBehaviour
     [SerializeField] private float barScale;
 
     private InputAction moveAction;
+    private InputAction extraAction;
     private float currentMoveSpeedX;
     private float minDeflectionAngleCos;
+    private float increaseSizeRemainingDuration;
+    private float stickyRemainingDuration;
+    private float shootingWhenHitRemainingDuration;
 
     private void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
+        extraAction = InputSystem.actions.FindAction("Extra");
         currentMoveSpeedX = 0f;
+        increaseSizeRemainingDuration = 0f;
+        stickyRemainingDuration = 0f;
+        shootingWhenHitRemainingDuration = 0f;
         minDeflectionAngleCos = Mathf.Cos(minDeflectionAngleInDegrees * Mathf.Deg2Rad);
         UpdateSize();
     }
 
+    private void Update()
+    {
+        if (stickyRemainingDuration > 0f) stickyRemainingDuration -= Time.deltaTime;
+        if (shootingWhenHitRemainingDuration > 0f) shootingWhenHitRemainingDuration -= Time.deltaTime;
+    }
+
     private void FixedUpdate()
     {
+        UpdateSize();
         Move();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        BuffCollectable buffCollectable = BuffCollectable.GetBuffCollectable(collision.collider);
+        if (!buffCollectable) return;
+
+        GameManager.Instance.CollectBuff(buffCollectable);
+        /*
+                    case BuffTypes.ShootWhenHit:
+                        if (CheckBuff(BuffTypes.ShootWhenHit))
+                        {
+                            Buff updatedBuff = currentBuffs[BuffTypes.ShootWhenHit];
+                            updatedBuff.duration = buff.duration + (updatedBuff.duration - (Time.time - updatedBuff.applicationTime));
+                            currentBuffs[BuffTypes.ShootWhenHit] = updatedBuff;
+                        }
+                        else
+                        {
+                            buff.applicationTime = Time.time;
+                            currentBuffs.Add(BuffTypes.ShootWhenHit, buff);
+                        }
+                        break;
+
+                    case BuffTypes.InvincibleBall:
+                        break;
+                }
+
+                Destroy(buffCollectable.gameObject);
+                */
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -36,6 +82,11 @@ public class PlayerBar : MonoBehaviour
         if (!ball) return;
 
         DeflectBall(ball);
+
+        if (shootingWhenHitRemainingDuration > 0f)
+        {
+            Debug.LogError("Shoot");
+        }
     }
 
     public void OnDrawGizmos()
@@ -60,9 +111,26 @@ public class PlayerBar : MonoBehaviour
         }
     }
 
+    public void AddIncreasedSizeDuration(float duration)
+    {
+        increaseSizeRemainingDuration += duration;
+    }
+
+    public void AddStickyDuration(float duration)
+    {
+        stickyRemainingDuration += duration;
+    }
+
+    public void AddShotWhenHitDuration(float duration)
+    {
+        shootingWhenHitRemainingDuration += duration;
+    }
+
     private void UpdateSize()
     {
-        barTransform.localScale = new Vector3(barScale, barTransform.localScale.y, 1f);
+        increaseSizeRemainingDuration = Mathf.Max(0f, increaseSizeRemainingDuration - Time.fixedDeltaTime);
+        float scale = barScale * ((increaseSizeRemainingDuration > 0) ? GameManager.Instance.IncreaseSizeMultiplier : 1f);
+        barTransform.localScale = new Vector3(scale, barTransform.localScale.y, 1f);
     }
 
     private void Move()

@@ -17,7 +17,7 @@ public class TilePickerOption : MonoBehaviour
     {
         Option = tileData;
 
-        gameObject.name = $"PickerOption [{(Option == null ? "Delete" : Option.variant)}]";
+        gameObject.name = $"PickerOption [{(Option == null ? "Delete" : Option.ID)}]";
 
         button.image.sprite = Option?.levelEditorRepresentation;
     }

@@ -46,8 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   levelsData: {fileID: 11400000, guid: d98b80491b3668445b461fca2eb0e711, type: 2}
   ballPrefab: {fileID: 1804416114135743167, guid: 48136732740356040b654a4726200ad6, type: 3}
-  tilePrefab: {fileID: 7847763355307611595, guid: 06c43a18b96cd104da80a88860a925e1, type: 3}
   ballsParent: {fileID: 0}
   tilesSpace: {fileID: 0}
   <PlayerBar>k__BackingField: {fileID: 0}
   ballSpawnOffset: 0.5
+  increaseSizeDuration: 10
+  <IncreaseSizeMultiplier>k__BackingField: 1.5
+  extraBallsSpawned: 3
+  extraBallsSpawnedLifespam: 10
+  shotWhenHitDuration: 10
+  stickyDuration: 10
+  ballInvincibilityDuration: 5

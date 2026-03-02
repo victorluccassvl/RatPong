@@ -14,29 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   enabled: 1
   ID: Level_1
-  tilesSerialized:
-  - variant: 0
-    levelEditorRepresentation: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
-  - variant: 0
-    levelEditorRepresentation: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
-  - variant: 0
-    levelEditorRepresentation: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
-  - variant: 0
-    levelEditorRepresentation: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
-  - variant: 0
-    levelEditorRepresentation: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
-  - variant: 0
-    levelEditorRepresentation: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
-  tilesSerializedPosition:
-  - {x: 4, y: 5}
-  - {x: 4, y: 6}
-  - {x: 5, y: 3}
-  - {x: 5, y: 5}
-  - {x: 5, y: 6}
-  - {x: 5, y: 8}
+  tilesSerialized: []
+  tilesSerializedPosition: []

@@ -172,7 +172,7 @@ public class LevelEditor : MonoBehaviour
         }
 
         currentTilePickedOption = optionPicked;
-        currentPickedLabel.text = optionPicked.Option.variant.ToString();
+        currentPickedLabel.text = optionPicked.Option.ID;
     }
 
     private void UpdateLevelOptions()

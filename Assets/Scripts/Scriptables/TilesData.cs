@@ -8,28 +8,27 @@ public class TilesData : ScriptableObject
     [Serializable]
     public class TileData
     {
-        [HideInInspector] public Tile.Variant variant;
+        [HideInInspector] public string ID;
         public Sprite levelEditorRepresentation;
         public GameObject prefab;
     }
 
     public List<TileData> tilesData;
 
-    public TileData GetTileDataByVariant(Tile.Variant variant)
+    public TileData GetTileDataByID(string ID)
     {
-        return tilesData.Find(td => td.variant == variant);
+        return tilesData.Find(td => td.ID == ID);
     }
 
     private void OnValidate()
     {
         tilesData.RemoveAll(tileData => tileData == null);
+        foreach (TileData tileData in tilesData) tileData.ID = tileData.prefab.name;
         foreach (TileData tileData in tilesData)
         {
-            if (tileData == null) continue;
-            tileData.variant = tileData.prefab.GetComponent<Tile>().variant;
-            if (tilesData.Exists(otherTile => otherTile.variant == tileData.variant && tileData != otherTile))
+            if (tilesData.Exists(otherTile => otherTile.ID == tileData.ID && tileData != otherTile))
             {
-                Debug.LogError("Tile Datas contain two tiles with same associated variant, one will may be ignored");
+                Debug.LogError("Tile Datas contain two tiles with same associated ID" + tileData.ID + ",one will may be ignored");
                 break;
             }
         }

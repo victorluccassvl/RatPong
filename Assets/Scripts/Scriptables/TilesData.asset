@@ -13,6 +13,48 @@ MonoBehaviour:
   m_Name: TilesData
   m_EditorClassIdentifier: Assembly-CSharp::TilePrefabs
   tilesData:
-  - variant: 0
-    levelEditorRepresentation: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 21300000, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DamageLineTile
+    levelEditorRepresentation: {fileID: 21300000, guid: d007519ac5677c7498cffdbb60e54a17, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 026813a478f1fc442b918a4225580c07, type: 3}
+  - ID: DamageColumnTile
+    levelEditorRepresentation: {fileID: 21300000, guid: c70a0b1dc09f35242bc8f0853d5c7715, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 71f836d64f577214eb39aa9fdfb0b98a, type: 3}
+  - ID: DamageDiagonalTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 16972e570239f334e948e59ca37731d8, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: eb02c435274654144be6fc3239e10679, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: BottomInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: efb4fa528160f9243ba8ef758cdd568c, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: c5ee947a696d08e4da929979d08d0562, type: 3}
+  - ID: DropBuffTile_IncreaseSize
+    levelEditorRepresentation: {fileID: 21300000, guid: 59bf9055d2376ce4084ee97eb4bdd9e0, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 86ecfed1ab177104f86d65dd1d43624e, type: 3}
+  - ID: DropBuffTile_InvincibleBall
+    levelEditorRepresentation: {fileID: 21300000, guid: 5e86d09434d5fa04485fe11da39a5acd, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 1e849e4e26eacf34987ed6f476926367, type: 3}
+  - ID: DropBuffTile_ShootWhenHit
+    levelEditorRepresentation: {fileID: 21300000, guid: ac5d75f91600710468504737074393ab, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 06c8e9bf0f17edb4c83dfc498f46fe09, type: 3}
+  - ID: DropBuffTile_SpawnBalls
+    levelEditorRepresentation: {fileID: 21300000, guid: 89b821a5b70572e42a6050a22c486279, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: d3257f95b84b6264cb8dabe60bab9b5f, type: 3}
+  - ID: DropBuffTile_Sticky
+    levelEditorRepresentation: {fileID: 21300000, guid: 92d65497ff76f3944bdd8759de5f80ed, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 4fd93594625069e4b8721ce0e15be2f4, type: 3}
+  - ID: DamageAllTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 3748ac31b4737094e8e2f8be212b1eca, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: eb1dd7d2372bc2b4d86939d9ac633ee6, type: 3}
+  - ID: DamageCrossTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 70b47448ce250ec46a9686e222316c39, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 4745ff2578327cc439070bdaf2b90f5f, type: 3}
