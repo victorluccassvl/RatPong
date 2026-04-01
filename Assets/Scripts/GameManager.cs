@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     private List<Ball> balls = new();
     private Tile[,] tiles = null;
-    private int tilesCount = 0;
+    private int destructibleTilesCount = 0;
 
     private void Awake()
     {
@@ -66,8 +66,9 @@ public class GameManager : MonoBehaviour
                     continue;
                 }
 
-                tilesCount++;
                 Tile newTile = Instantiate(tile.prefab, tilesSpace.transform).GetComponent<Tile>();
+                if (newTile.IsDestructible) destructibleTilesCount++;
+
                 Vector2Int gridPosition = new Vector2Int(column, line);
                 newTile.Setup(gridPosition, tilesSpace);
                 newTile.OnTileDestroyed += OnTileDestroyed;
@@ -132,9 +133,9 @@ public class GameManager : MonoBehaviour
 
         tile.OnTileDestroyed -= OnTileDestroyed;
         tiles[position.x, position.y] = null;
-        tilesCount--;
+        destructibleTilesCount--;
 
-        if (tilesCount <= 0)
+        if (destructibleTilesCount <= 0)
         {
             // Vitoria
             PlayerPrefs.SetString(SceneManager.Instance.CurrentLevel.ID, "");

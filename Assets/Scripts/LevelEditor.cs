@@ -104,7 +104,8 @@ public class LevelEditor : MonoBehaviour
                 currentLevelData.tiles[column, line] = editableTiles[column, line].CurrentTile;
             }
         }
-        AssetDatabase.SaveAssetIfDirty(currentLevelData);
+        EditorUtility.SetDirty(currentLevelData);
+        AssetDatabase.SaveAssets();
 
         DisplayOperationFeedback(OperationFeedback.LevelSaved, currentLevelData.ID);
     }

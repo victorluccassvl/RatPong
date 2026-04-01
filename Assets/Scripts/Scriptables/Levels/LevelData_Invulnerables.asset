@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5deadbf45d5557945989ab9a3f118e8e, type: 3}
+  m_Name: LevelData_Invulnerables
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  enabled: 1
+  ID: Level_Invulnerables
+  tilesSerialized:
+  - ID: BottomInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: efb4fa528160f9243ba8ef758cdd568c, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: c5ee947a696d08e4da929979d08d0562, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: BottomInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: efb4fa528160f9243ba8ef758cdd568c, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: c5ee947a696d08e4da929979d08d0562, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: BottomInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: efb4fa528160f9243ba8ef758cdd568c, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: c5ee947a696d08e4da929979d08d0562, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: BottomInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: efb4fa528160f9243ba8ef758cdd568c, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: c5ee947a696d08e4da929979d08d0562, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: BottomInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: efb4fa528160f9243ba8ef758cdd568c, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: c5ee947a696d08e4da929979d08d0562, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: BottomInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: efb4fa528160f9243ba8ef758cdd568c, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: c5ee947a696d08e4da929979d08d0562, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: BottomInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: efb4fa528160f9243ba8ef758cdd568c, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: c5ee947a696d08e4da929979d08d0562, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: BottomInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: efb4fa528160f9243ba8ef758cdd568c, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: c5ee947a696d08e4da929979d08d0562, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: BottomInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: efb4fa528160f9243ba8ef758cdd568c, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: c5ee947a696d08e4da929979d08d0562, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  - ID: BottomInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: efb4fa528160f9243ba8ef758cdd568c, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: c5ee947a696d08e4da929979d08d0562, type: 3}
+  - ID: TopInvulnerableTile
+    levelEditorRepresentation: {fileID: 21300000, guid: 881aa9d8c1cb0d847bf8ce2e1a2f6f0b, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 637a954ab67de23429718b904415fa36, type: 3}
+  tilesSerializedPosition:
+  - {x: 0, y: 0}
+  - {x: 0, y: 7}
+  - {x: 1, y: 0}
+  - {x: 1, y: 7}
+  - {x: 2, y: 0}
+  - {x: 2, y: 7}
+  - {x: 3, y: 0}
+  - {x: 3, y: 7}
+  - {x: 4, y: 0}
+  - {x: 4, y: 7}
+  - {x: 5, y: 6}
+  - {x: 5, y: 7}
+  - {x: 6, y: 6}
+  - {x: 6, y: 7}
+  - {x: 7, y: 0}
+  - {x: 7, y: 7}
+  - {x: 8, y: 0}
+  - {x: 8, y: 7}
+  - {x: 9, y: 0}
+  - {x: 9, y: 7}
+  - {x: 10, y: 0}
+  - {x: 10, y: 7}
+  - {x: 11, y: 0}
+  - {x: 11, y: 7}

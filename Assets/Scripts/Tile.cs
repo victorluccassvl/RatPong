@@ -38,6 +38,7 @@ public class Tile : MonoBehaviour
     public Action<Tile, DamageEffect> OnTileDestroyed = delegate { };
 
     public Vector2Int GridPosition { get; private set; } = Vector2Int.zero;
+    public bool IsDestructible => invulnerability != InvulnerabilityType.Both;
     private TilesSpace currentSpace;
     private int hitsReceived;
 
