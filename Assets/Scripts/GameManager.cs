@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -141,6 +142,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetString(SceneManager.Instance.CurrentLevel.ID, "");
             PlayerPrefs.Save();
             SceneManager.Instance.GoToMainMenu();
+            return;
         }
 
         bool stop = false;

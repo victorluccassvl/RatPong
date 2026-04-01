@@ -34,6 +34,9 @@ public class Tile : MonoBehaviour
     [SerializeField] private InvulnerabilityType invulnerability;
     [SerializeField] private DamageEffect damageEffect;
     [SerializeField] private GameObject buffToDropPrefab;
+    [SerializeField] private ParticleSystem breakVFX;
+    [SerializeField] private ParticleSystem damageOthersVFX;
+
 
     public Action<Tile, DamageEffect> OnTileDestroyed = delegate { };
 
@@ -54,11 +57,6 @@ public class Tile : MonoBehaviour
         if (!ball) return;
 
         GetHit(ball);
-    }
-
-    private void OnDestroy()
-    {
-        OnTileDestroyed(this, damageEffect);
     }
 
     public void Setup(Vector2Int gridPosition, TilesSpace tileSpace)
@@ -142,8 +140,18 @@ public class Tile : MonoBehaviour
     {
         Destroy(gameObject);
 
-        if (buffToDropPrefab == null) return;
+        OnTileDestroyed(this, damageEffect);
 
+        breakVFX.transform.parent = null;
+        breakVFX.Play();
+
+        if (damageOthersVFX != null)
+        {
+            damageOthersVFX.transform.parent = null;
+            damageOthersVFX.Play();
+        }
+
+        if (buffToDropPrefab == null) return;
         Instantiate(buffToDropPrefab, currentSpace.transform);
     }
 }

@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
+using System.Collections;
 
 public class SceneManager : MonoBehaviour
 {
@@ -22,9 +24,8 @@ public class SceneManager : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        CurrentLevel = null;
-
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        if (goToMainMenuCoroutine != null) StopCoroutine(goToMainMenuCoroutine);
+        goToMainMenuCoroutine = StartCoroutine(GoToMainMenuRoutine(0.5f));
     }
 
     public void LoadLevel(LevelData levelToLoad)
@@ -38,5 +39,17 @@ public class SceneManager : MonoBehaviour
         CurrentLevel = levelToLoad;
 
         UnityEngine.SceneManagement.SceneManager.LoadScene("Game", LoadSceneMode.Single);
+    }
+
+    private Coroutine goToMainMenuCoroutine = null;
+    private IEnumerator GoToMainMenuRoutine(float delay = 0f)
+    {
+        yield return new WaitForSeconds(delay);
+
+        CurrentLevel = null;
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+
+        goToMainMenuCoroutine = null;
     }
 }
