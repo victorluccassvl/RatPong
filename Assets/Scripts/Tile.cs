@@ -102,10 +102,10 @@ public class Tile : MonoBehaviour
         switch (invulnerability)
         {
             case InvulnerabilityType.Top:
-                blocked = !ball.IsInvincible && ball.transform.position.y < transform.position.y;
+                blocked = !ball.IsInvincible && ball.GetPosition.y < transform.position.y;
                 break;
             case InvulnerabilityType.Bottom:
-                blocked = !ball.IsInvincible && ball.transform.position.y > transform.position.y;
+                blocked = !ball.IsInvincible && ball.GetPosition.y > transform.position.y;
                 break;
             case InvulnerabilityType.Both:
                 blocked = true;

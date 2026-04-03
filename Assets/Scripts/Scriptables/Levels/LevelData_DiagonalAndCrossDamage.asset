@@ -16,112 +16,112 @@ MonoBehaviour:
   ID: Level_DiagonalAndCrossDamage
   tilesSerialized:
   - ID: InvulnerableTile
-    levelEditorRepresentation: {fileID: 21300000, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
   - ID: InvulnerableTile
-    levelEditorRepresentation: {fileID: 21300000, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: InvulnerableTile
-    levelEditorRepresentation: {fileID: 21300000, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: InvulnerableTile
-    levelEditorRepresentation: {fileID: 21300000, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: InvulnerableTile
-    levelEditorRepresentation: {fileID: 21300000, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: DamageCrossTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 70b47448ce250ec46a9686e222316c39, type: 3}
+    levelEditorRepresentation: {fileID: -6970676182093701538, guid: 70b47448ce250ec46a9686e222316c39, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 4745ff2578327cc439070bdaf2b90f5f, type: 3}
   - ID: DamageDiagonalTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 16972e570239f334e948e59ca37731d8, type: 3}
+    levelEditorRepresentation: {fileID: -2906386922286838043, guid: 16972e570239f334e948e59ca37731d8, type: 3}
     prefab: {fileID: 6323504698033334984, guid: eb02c435274654144be6fc3239e10679, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: DamageCrossTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 70b47448ce250ec46a9686e222316c39, type: 3}
+    levelEditorRepresentation: {fileID: -6970676182093701538, guid: 70b47448ce250ec46a9686e222316c39, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 4745ff2578327cc439070bdaf2b90f5f, type: 3}
   - ID: DamageDiagonalTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 16972e570239f334e948e59ca37731d8, type: 3}
+    levelEditorRepresentation: {fileID: -2906386922286838043, guid: 16972e570239f334e948e59ca37731d8, type: 3}
     prefab: {fileID: 6323504698033334984, guid: eb02c435274654144be6fc3239e10679, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: InvulnerableTile
-    levelEditorRepresentation: {fileID: 21300000, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: InvulnerableTile
-    levelEditorRepresentation: {fileID: 21300000, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: InvulnerableTile
-    levelEditorRepresentation: {fileID: 21300000, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: InvulnerableTile
-    levelEditorRepresentation: {fileID: 21300000, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: InvulnerableTile
-    levelEditorRepresentation: {fileID: 21300000, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
   tilesSerializedPosition:
   - {x: 0, y: 0}

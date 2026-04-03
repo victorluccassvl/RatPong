@@ -14,6 +14,7 @@ public class Ball : MonoBehaviour
     [field: SerializeField] public float MinSpeed { get; private set; }
     [SerializeField] private float initialSpeed;
 
+    public Vector3 GetPosition => RB.position;
     public bool IsInvincible => invincibilityRemainingDuration > 0;
 
     private bool hasLimitedLifespam = false;

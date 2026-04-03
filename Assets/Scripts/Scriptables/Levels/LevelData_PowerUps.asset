@@ -16,10 +16,10 @@ MonoBehaviour:
   ID: Level_PowerUps
   tilesSerialized:
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: CommonTile
-    levelEditorRepresentation: {fileID: 21300000, guid: 184f2213506957644b97b482770654df, type: 3}
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   tilesSerializedPosition:
   - {x: 5, y: 6}

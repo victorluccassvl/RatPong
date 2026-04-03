@@ -209,6 +209,9 @@ public class LevelEditor : MonoBehaviour
                 AssetDatabase.DeleteAsset(levelPath);
             }
         }
+
+        EditorUtility.SetDirty(levelsData);
+        AssetDatabase.SaveAssets();
     }
 
     private void UpdateLevelTiles()
