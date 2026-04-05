@@ -13,7 +13,9 @@ public class PlayerBar : MonoBehaviour
     [SerializeField] private float acceleration;
     [SerializeField] private float minDeflectionAngleInDegrees;
     [SerializeField] private int gizmoDeflectionResolution;
-    [SerializeField] private float barScale;
+    [SerializeField] private float defaultBarScale;
+
+    private float BarCurrentScale => defaultBarScale * ((increaseSizeRemainingDuration > 0) ? GameManager.Instance.IncreaseSizeMultiplier : 1f);
 
     private InputAction moveAction;
     private InputAction extraAction;
@@ -37,8 +39,9 @@ public class PlayerBar : MonoBehaviour
 
     private void Update()
     {
-        if (stickyRemainingDuration > 0f) stickyRemainingDuration -= Time.deltaTime;
-        if (shootingWhenHitRemainingDuration > 0f) shootingWhenHitRemainingDuration -= Time.deltaTime;
+        stickyRemainingDuration = Mathf.Max(0f, stickyRemainingDuration - Time.deltaTime);
+        shootingWhenHitRemainingDuration = Mathf.Max(0f, shootingWhenHitRemainingDuration - Time.deltaTime);
+        increaseSizeRemainingDuration = Mathf.Max(0f, increaseSizeRemainingDuration - Time.deltaTime);
     }
 
     private void FixedUpdate()
@@ -47,33 +50,33 @@ public class PlayerBar : MonoBehaviour
         Move();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        BuffCollectable buffCollectable = BuffCollectable.GetBuffCollectable(collision.collider);
+        BuffCollectable buffCollectable = BuffCollectable.GetBuffCollectable(collider);
         if (!buffCollectable) return;
 
         GameManager.Instance.CollectBuff(buffCollectable);
         /*
-                    case BuffTypes.ShootWhenHit:
-                        if (CheckBuff(BuffTypes.ShootWhenHit))
-                        {
-                            Buff updatedBuff = currentBuffs[BuffTypes.ShootWhenHit];
-                            updatedBuff.duration = buff.duration + (updatedBuff.duration - (Time.time - updatedBuff.applicationTime));
-                            currentBuffs[BuffTypes.ShootWhenHit] = updatedBuff;
-                        }
-                        else
-                        {
-                            buff.applicationTime = Time.time;
-                            currentBuffs.Add(BuffTypes.ShootWhenHit, buff);
-                        }
-                        break;
-
-                    case BuffTypes.InvincibleBall:
-                        break;
+            case BuffTypes.ShootWhenHit:
+                if (CheckBuff(BuffTypes.ShootWhenHit))
+                {
+                    Buff updatedBuff = currentBuffs[BuffTypes.ShootWhenHit];
+                    updatedBuff.duration = buff.duration + (updatedBuff.duration - (Time.time - updatedBuff.applicationTime));
+                    currentBuffs[BuffTypes.ShootWhenHit] = updatedBuff;
                 }
+                else
+                {
+                    buff.applicationTime = Time.time;
+                    currentBuffs.Add(BuffTypes.ShootWhenHit, buff);
+                }
+                break;
 
-                Destroy(buffCollectable.gameObject);
-                */
+            case BuffTypes.InvincibleBall:
+                break;
+        }
+
+        Destroy(buffCollectable.gameObject);
+        */
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -106,7 +109,7 @@ public class PlayerBar : MonoBehaviour
             deflectedAngleCos = 2f * (arrow / (float)(arrows - 1)) - 1f;
             reflectDirection = GetDeflectionDirection(deflectedAngleCos);
             reflectDirection.Normalize();
-            globalBarPositionX = RB.position.x + (barScale / 2f) * deflectedAngleCos;
+            globalBarPositionX = RB.position.x + (BarCurrentScale / 2f) * deflectedAngleCos;
             Gizmos.DrawLine(new Vector3(globalBarPositionX, RB.position.y, 0f), new Vector3(globalBarPositionX + reflectDirection.x, RB.position.y + reflectDirection.y, 0f));
         }
     }
@@ -128,9 +131,7 @@ public class PlayerBar : MonoBehaviour
 
     private void UpdateSize()
     {
-        increaseSizeRemainingDuration = Mathf.Max(0f, increaseSizeRemainingDuration - Time.fixedDeltaTime);
-        float scale = barScale * ((increaseSizeRemainingDuration > 0) ? GameManager.Instance.IncreaseSizeMultiplier : 1f);
-        barTransform.localScale = new Vector3(scale, barTransform.localScale.y, 1f);
+        barTransform.localScale = new Vector3(BarCurrentScale, barTransform.localScale.y, 1f);
     }
 
     private void Move()
@@ -154,8 +155,8 @@ public class PlayerBar : MonoBehaviour
     {
         float playerPositionX = RB.position.x;
 
-        float contactPosition = Mathf.Clamp(collisionGlobalPositionX, playerPositionX - barScale / 2f, playerPositionX + barScale / 2f);
-        float contactNormalizedPosition = Mathf.InverseLerp(playerPositionX - barScale / 2f, playerPositionX + barScale / 2f, contactPosition);
+        float contactPosition = Mathf.Clamp(collisionGlobalPositionX, playerPositionX - BarCurrentScale / 2f, playerPositionX + BarCurrentScale / 2f);
+        float contactNormalizedPosition = Mathf.InverseLerp(playerPositionX - BarCurrentScale / 2f, playerPositionX + BarCurrentScale / 2f, contactPosition);
         return contactNormalizedPosition * 2f - 1;
     }
 

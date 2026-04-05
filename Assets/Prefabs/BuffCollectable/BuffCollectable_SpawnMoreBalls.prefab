@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7716397142444988115}
   - component: {fileID: 1128638967104908745}
   m_Layer: 12
-  m_Name: BuffCollectable_IncreaseSize
+  m_Name: BuffCollectable_SpawnMoreBalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b671b71704a7d43928dc06bac58d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuffCollectable
-  <Buff>k__BackingField: 0
+  <Buff>k__BackingField: 1
   fallSpeed: 0.1
   <RB>k__BackingField: {fileID: 1999697538058268390}
   collider: {fileID: 4245761339595307194}
@@ -80,7 +80,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7716397142444988115}
@@ -134,7 +134,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1916905748111044876, guid: 70325e27d68524b46a17ce7f95657fb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,7 +142,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!58 &4245761339595307194
 CircleCollider2D:
@@ -179,7 +179,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.65
 --- !u!50 &1999697538058268390
 Rigidbody2D:
   serializedVersion: 5

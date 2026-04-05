@@ -152,6 +152,6 @@ public class Tile : MonoBehaviour
         }
 
         if (buffToDropPrefab == null) return;
-        Instantiate(buffToDropPrefab, currentSpace.transform);
+        Instantiate(buffToDropPrefab, transform.position, Quaternion.identity, currentSpace.transform);
     }
 }

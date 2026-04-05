@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7716397142444988115}
   - component: {fileID: 1128638967104908745}
   m_Layer: 12
-  m_Name: BuffCollectable_InvincibleBall
+  m_Name: BuffCollectable_IncreaseBarSize
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b671b71704a7d43928dc06bac58d91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuffCollectable
-  <Buff>k__BackingField: 4
-  fallSpeed: 0.1
+  <Buff>k__BackingField: 0
+  fallSpeed: 1
   <RB>k__BackingField: {fileID: 1999697538058268390}
   collider: {fileID: 4245761339595307194}
   physicsEventForward: {fileID: 246258872013779996}
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1174346555923165241, guid: 885007aeca8108b4195752876c87d5b9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7823435, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -195,7 +195,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

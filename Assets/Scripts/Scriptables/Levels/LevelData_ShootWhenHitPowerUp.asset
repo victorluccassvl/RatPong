@@ -36,9 +36,6 @@ MonoBehaviour:
   - ID: CommonTile
     levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
     prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
-  - ID: CommonTile
-    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
-    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
   - ID: DropBuffTile_ShootWhenHit
     levelEditorRepresentation: {fileID: 499143971454744469, guid: ac5d75f91600710468504737074393ab, type: 3}
     prefab: {fileID: 6323504698033334984, guid: 06c8e9bf0f17edb4c83dfc498f46fe09, type: 3}
@@ -165,7 +162,6 @@ MonoBehaviour:
   - {x: 0, y: 10}
   - {x: 0, y: 11}
   - {x: 1, y: 0}
-  - {x: 1, y: 9}
   - {x: 1, y: 10}
   - {x: 1, y: 11}
   - {x: 2, y: 0}
