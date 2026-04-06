@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case BuffType.InvincibleBall:
-                foreach (Ball ball in balls) ball.SetInvincibilityDuration(ballInvincibilityDuration);
+                foreach (Ball ball in balls) ball.AddInvincibilityDuration(ballInvincibilityDuration);
                 break;
         }
 

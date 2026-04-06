@@ -8,14 +8,19 @@ public class Ball : MonoBehaviour
 
     [field: SerializeField] public Rigidbody2D RB;
     [SerializeField] private new CircleCollider2D collider;
+    [SerializeField] private CircleCollider2D trigger;
+    [SerializeField] private new SpriteRenderer renderer;
     [SerializeField] private PhysicsEventForward physicsEventForward;
+
+    [SerializeField] private Sprite defaultSprite;
+    [SerializeField] private Sprite invincibleSprite;
 
     [field: SerializeField] public float MaxSpeed { get; private set; }
     [field: SerializeField] public float MinSpeed { get; private set; }
     [SerializeField] private float initialSpeed;
 
     public Vector3 GetPosition => RB.position;
-    public bool IsInvincible => invincibilityRemainingDuration > 0;
+    public bool IsInvincible => invincibilityRemainingDuration > 0f;
 
     private bool hasLimitedLifespam = false;
     private float lifespam = -1f;
@@ -32,15 +37,18 @@ public class Ball : MonoBehaviour
     private void Awake()
     {
         ballColliders.Add(collider, this);
+        ballColliders.Add(trigger, this);
         RB.AddForce(initialSpeed * Vector2.up, ForceMode2D.Impulse);
 
         invincibilityRemainingDuration = 0f;
+        UpdateInvincibilityStatus();
         physicsEventForward.OnTriggerEnter2DEvent += RegisterKillZoneEntry;
     }
 
     private void Update()
     {
-        if (invincibilityRemainingDuration > 0f) invincibilityRemainingDuration -= Time.deltaTime;
+        invincibilityRemainingDuration = Mathf.Max(0f, invincibilityRemainingDuration - Time.deltaTime);
+        UpdateInvincibilityStatus();
         if (!hasLimitedLifespam) return;
 
         lifespam -= Time.deltaTime;
@@ -51,6 +59,7 @@ public class Ball : MonoBehaviour
     private void OnDestroy()
     {
         ballColliders.Remove(collider);
+        ballColliders.Remove(trigger);
         physicsEventForward.OnTriggerEnter2DEvent -= RegisterKillZoneEntry;
 
         OnBallDestroyed(this);
@@ -62,9 +71,19 @@ public class Ball : MonoBehaviour
         this.lifespam = lifespam;
     }
 
-    public void SetInvincibilityDuration(float duration)
+    public void AddInvincibilityDuration(float duration)
     {
-        invincibilityRemainingDuration = duration;
+        invincibilityRemainingDuration += duration;
+    }
+
+    private void UpdateInvincibilityStatus()
+    {
+
+        Sprite desiredSprite = IsInvincible ? invincibleSprite : defaultSprite;
+        if (renderer.sprite != desiredSprite) renderer.sprite = desiredSprite;
+
+        LayerMask desiredExcludeLayers = IsInvincible ? LayerMask.GetMask("Tile") : LayerMask.GetMask();
+        if (collider.excludeLayers != desiredExcludeLayers) collider.excludeLayers = desiredExcludeLayers;
     }
 
     private void RegisterKillZoneEntry(Collider2D other)

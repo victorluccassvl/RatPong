@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuffCollectable
   <Buff>k__BackingField: 1
-  fallSpeed: 0.1
+  fallSpeed: 1
   <RB>k__BackingField: {fileID: 1999697538058268390}
   collider: {fileID: 4245761339595307194}
   physicsEventForward: {fileID: 246258872013779996}
@@ -195,7 +195,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

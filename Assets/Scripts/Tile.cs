@@ -51,10 +51,21 @@ public class Tile : MonoBehaviour
         UpdateVisuals();
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Ball ball = Ball.GetBall(other);
+
+        if (!ball) return;
+        if (!ball.IsInvincible) return;
+
+        GetHit(ball);
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         Ball ball = Ball.GetBall(collision.collider);
         if (!ball) return;
+        if (ball.IsInvincible) return;
 
         GetHit(ball);
     }
@@ -108,8 +119,8 @@ public class Tile : MonoBehaviour
                 blocked = !ball.IsInvincible && ball.GetPosition.y > transform.position.y;
                 break;
             case InvulnerabilityType.Both:
-                blocked = true;
-                return;
+                blocked = !ball.IsInvincible;
+                break;
         }
 
         if (blocked) return;
