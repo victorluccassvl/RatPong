@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public float IncreaseSizeMultiplier { get; private set; }
     [SerializeField] private uint extraBallsSpawned;
     [SerializeField] private float extraBallsSpawnedLifespam;
+    [SerializeField] private float extraBallsSpawnAngle;
     [SerializeField] private float shotWhenHitDuration;
     [SerializeField] private float stickyDuration;
     [SerializeField] private float ballInvincibilityDuration;
@@ -79,12 +80,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SpawnBall(float? lifespam = null)
+    public void SpawnBall(uint amount = 1)
     {
-        Ball ball = Instantiate(ballPrefab, PlayerBar.transform.position + Vector3.up * ballSpawnOffset, Quaternion.identity, ballsParent);
-        balls.Add(ball);
-        if (lifespam != null) ball.SetLifespam(lifespam.Value);
-        ball.OnBallDestroyed += OnBallDestroyed;
+        float spawnAngle = 90f + ((amount == 1) ? 0 : -extraBallsSpawnAngle / 2f);
+
+        for (int i = 0; i < amount; i++)
+        {
+            Vector3 direction = new Vector3(Mathf.Cos(spawnAngle * Mathf.Deg2Rad), Mathf.Sin(spawnAngle * Mathf.Deg2Rad), 0f);
+            Ball ball = Instantiate(ballPrefab, PlayerBar.transform.position + direction * ballSpawnOffset, Quaternion.identity, ballsParent);
+            ball.Launch(direction);
+            balls.Add(ball);
+            ball.OnBallDestroyed += OnBallDestroyed;
+            spawnAngle += extraBallsSpawnAngle / (amount - 1);
+        }
     }
 
     public void CollectBuff(BuffCollectable buffCollectable)
@@ -97,7 +105,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case BuffType.SpawnBalls:
-                for (int i = 0; i < extraBallsSpawned; i++) SpawnBall(extraBallsSpawnedLifespam);
+                SpawnBall(extraBallsSpawned);
                 break;
 
             case BuffType.Sticky:

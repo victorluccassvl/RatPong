@@ -54,6 +54,7 @@ MonoBehaviour:
   <IncreaseSizeMultiplier>k__BackingField: 1.5
   extraBallsSpawned: 3
   extraBallsSpawnedLifespam: 10
+  extraBallsSpawnAngle: 90
   shotWhenHitDuration: 10
   stickyDuration: 10
   ballInvincibilityDuration: 5

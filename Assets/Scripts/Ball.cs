@@ -22,8 +22,6 @@ public class Ball : MonoBehaviour
     public Vector3 GetPosition => RB.position;
     public bool IsInvincible => invincibilityRemainingDuration > 0f;
 
-    private bool hasLimitedLifespam = false;
-    private float lifespam = -1f;
     private float invincibilityRemainingDuration = 0f;
 
     public Action<Ball> OnBallDestroyed = delegate { };
@@ -38,7 +36,6 @@ public class Ball : MonoBehaviour
     {
         ballColliders.Add(collider, this);
         ballColliders.Add(trigger, this);
-        RB.AddForce(initialSpeed * Vector2.up, ForceMode2D.Impulse);
 
         invincibilityRemainingDuration = 0f;
         UpdateInvincibilityStatus();
@@ -49,11 +46,6 @@ public class Ball : MonoBehaviour
     {
         invincibilityRemainingDuration = Mathf.Max(0f, invincibilityRemainingDuration - Time.deltaTime);
         UpdateInvincibilityStatus();
-        if (!hasLimitedLifespam) return;
-
-        lifespam -= Time.deltaTime;
-
-        if (lifespam < 0) Kill();
     }
 
     private void OnDestroy()
@@ -65,10 +57,9 @@ public class Ball : MonoBehaviour
         OnBallDestroyed(this);
     }
 
-    public void SetLifespam(float lifespam)
+    public void Launch(Vector3 direction)
     {
-        hasLimitedLifespam = true;
-        this.lifespam = lifespam;
+        RB.AddForce(initialSpeed * direction.normalized, ForceMode2D.Impulse);
     }
 
     public void AddInvincibilityDuration(float duration)
