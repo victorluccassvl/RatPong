@@ -51,6 +51,13 @@ public class Tile : MonoBehaviour
         UpdateVisuals();
     }
 
+    private void OnParticleCollision(GameObject other)
+    {
+        if (other.layer != LayerMask.NameToLayer("Bullet")) return;
+
+        GetHit();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         Ball ball = Ball.GetBall(other);
@@ -80,9 +87,28 @@ public class Tile : MonoBehaviour
         collider.size = tileSpace.CellSize;
     }
 
-    public void Hit(Vector2Int explodedTilePosition)
+    public void Hit(Vector2Int explodedTilePosition) => GetHit(explodedTilePosition);
+
+    private void GetHit()
     {
-        GetHit(explodedTilePosition);
+        bool blocked = false;
+        switch (invulnerability)
+        {
+            case InvulnerabilityType.Top:
+                blocked = false;
+                break;
+            case InvulnerabilityType.Bottom:
+                blocked = false;
+                break;
+            case InvulnerabilityType.Both:
+                blocked = true;
+                return;
+        }
+
+        if (blocked) return;
+
+        hitsReceived++;
+        UpdateHits();
     }
 
     private void GetHit(Vector2Int explodedTile)

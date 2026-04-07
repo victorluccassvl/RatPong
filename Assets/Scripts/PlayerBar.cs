@@ -7,6 +7,10 @@ public class PlayerBar : MonoBehaviour
     [Header("References")]
     [SerializeField, Self] private Rigidbody2D RB;
     [SerializeField] private Transform barTransform;
+    [SerializeField] private Transform leftGunPivot;
+    [SerializeField] private Transform rightGunPivot;
+    [SerializeField] private ParticleSystem leftGun;
+    [SerializeField] private ParticleSystem rightGun;
 
     [Header("General Settings")]
     [SerializeField] private float maxMoveSpeed;
@@ -40,8 +44,9 @@ public class PlayerBar : MonoBehaviour
     private void Update()
     {
         stickyRemainingDuration = Mathf.Max(0f, stickyRemainingDuration - Time.deltaTime);
-        shootingWhenHitRemainingDuration = Mathf.Max(0f, shootingWhenHitRemainingDuration - Time.deltaTime);
         increaseSizeRemainingDuration = Mathf.Max(0f, increaseSizeRemainingDuration - Time.deltaTime);
+        shootingWhenHitRemainingDuration = Mathf.Max(0f, shootingWhenHitRemainingDuration - Time.deltaTime);
+        UpdateGunStatus();
     }
 
     private void FixedUpdate()
@@ -88,7 +93,8 @@ public class PlayerBar : MonoBehaviour
 
         if (shootingWhenHitRemainingDuration > 0f)
         {
-            Debug.LogError("Shoot");
+            leftGun.Play();
+            rightGun.Play();
         }
     }
 
@@ -132,6 +138,20 @@ public class PlayerBar : MonoBehaviour
     private void UpdateSize()
     {
         barTransform.localScale = new Vector3(BarCurrentScale, barTransform.localScale.y, 1f);
+        leftGun.transform.position = leftGunPivot.position;
+        rightGun.transform.position = rightGunPivot.position;
+    }
+
+    private void UpdateGunStatus()
+    {
+        bool isGunActive = leftGun.gameObject.activeSelf && rightGun.gameObject.activeSelf;
+        bool shouldGunBeActive = shootingWhenHitRemainingDuration > 0;
+
+        if (isGunActive != shouldGunBeActive)
+        {
+            leftGun.gameObject.SetActive(shouldGunBeActive);
+            rightGun.gameObject.SetActive(shouldGunBeActive);
+        }
     }
 
     private void Move()
