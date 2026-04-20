@@ -98,8 +98,6 @@ public class Tile : MonoBehaviour
                 blocked = false;
                 break;
             case InvulnerabilityType.Bottom:
-                blocked = false;
-                break;
             case InvulnerabilityType.Both:
                 blocked = true;
                 return;
