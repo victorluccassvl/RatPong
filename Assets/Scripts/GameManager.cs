@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.AppUI.Core;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -54,7 +55,7 @@ public class GameManager : MonoBehaviour
     {
         LevelData currentLevel = SceneManager.Instance.CurrentLevel;
 
-        SpawnBall();
+        SpawnBall(spawnsCaptured: true);
 
         tiles = new Tile[LevelsData.LEVEL_GRID_SIZE_COLUMNS, LevelsData.LEVEL_GRID_SIZE_LINES];
         for (int column = 0; column < currentLevel.tiles.GetLength(0); column++)
@@ -80,19 +81,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SpawnBall(uint amount = 1)
+    public void SpawnBall(uint amount = 1, bool spawnsCaptured = false)
     {
         float spawnAngle = 90f + ((amount == 1) ? 0 : -extraBallsSpawnAngle / 2f);
 
         for (int i = 0; i < amount; i++)
         {
             Vector3 direction = new Vector3(Mathf.Cos(spawnAngle * Mathf.Deg2Rad), Mathf.Sin(spawnAngle * Mathf.Deg2Rad), 0f);
-            Ball ball = Instantiate(ballPrefab, PlayerBar.transform.position + direction * ballSpawnOffset, Quaternion.identity, ballsParent);
-            ball.Launch(direction);
+            Vector3 spawnPosition = PlayerBar.transform.position + direction * ballSpawnOffset;
+            Ball ball = Instantiate(ballPrefab, spawnPosition, Quaternion.identity, ballsParent);
+            if (spawnsCaptured) PlayerBar.CaptureBall(ball);
+            else LaunchBall(ball, direction);
             balls.Add(ball);
             ball.OnBallDestroyed += OnBallDestroyed;
             spawnAngle += extraBallsSpawnAngle / (amount - 1);
         }
+    }
+
+    public void LaunchBall(Ball ball, Vector3 direction)
+    {
+        if (ball.transform.parent != ballsParent) ball.transform.SetParent(ballsParent);
+        ball.Launch(direction);
     }
 
     public void CollectBuff(BuffCollectable buffCollectable)

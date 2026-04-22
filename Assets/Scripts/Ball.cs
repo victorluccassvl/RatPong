@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private new CircleCollider2D collider;
     [SerializeField] private CircleCollider2D trigger;
     [SerializeField] private new SpriteRenderer renderer;
-    [SerializeField] private PhysicsEventForward physicsEventForward;
+    [SerializeField] private SpriteRenderer stickRenderer;
 
     [SerializeField] private Sprite defaultSprite;
     [SerializeField] private Sprite invincibleSprite;
@@ -39,7 +39,6 @@ public class Ball : MonoBehaviour
 
         invincibilityRemainingDuration = 0f;
         UpdateInvincibilityStatus();
-        physicsEventForward.OnTriggerEnter2DEvent += RegisterKillZoneEntry;
     }
 
     private void Update()
@@ -52,14 +51,21 @@ public class Ball : MonoBehaviour
     {
         ballColliders.Remove(collider);
         ballColliders.Remove(trigger);
-        physicsEventForward.OnTriggerEnter2DEvent -= RegisterKillZoneEntry;
 
         OnBallDestroyed(this);
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!other.CompareTag("KillZone")) return;
+        Kill();
+    }
+
     public void Launch(Vector3 direction)
     {
+        RB.simulated = true;
         RB.AddForce(initialSpeed * direction.normalized, ForceMode2D.Impulse);
+        SetStickyState(false);
     }
 
     public void AddInvincibilityDuration(float duration)
@@ -67,20 +73,18 @@ public class Ball : MonoBehaviour
         invincibilityRemainingDuration += duration;
     }
 
+    public void SetStickyState(bool sticky)
+    {
+        stickRenderer.enabled = sticky;
+    }
+
     private void UpdateInvincibilityStatus()
     {
-
         Sprite desiredSprite = IsInvincible ? invincibleSprite : defaultSprite;
         if (renderer.sprite != desiredSprite) renderer.sprite = desiredSprite;
 
         LayerMask desiredExcludeLayers = IsInvincible ? LayerMask.GetMask("Tile") : LayerMask.GetMask();
         if (collider.excludeLayers != desiredExcludeLayers) collider.excludeLayers = desiredExcludeLayers;
-    }
-
-    private void RegisterKillZoneEntry(Collider2D other)
-    {
-        if (!other.CompareTag("KillZone")) return;
-        Kill();
     }
 
     private void Kill()

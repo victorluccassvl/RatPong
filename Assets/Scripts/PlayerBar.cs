@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using KBCore.Refs;
+using System.Collections.Generic;
+using System.Text;
 
 public class PlayerBar : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class PlayerBar : MonoBehaviour
     [SerializeField] private Transform rightGunPivot;
     [SerializeField] private ParticleSystem leftGun;
     [SerializeField] private ParticleSystem rightGun;
+    [SerializeField] private SpriteRenderer stickyRenderer;
 
     [Header("General Settings")]
     [SerializeField] private float maxMoveSpeed;
@@ -20,19 +23,22 @@ public class PlayerBar : MonoBehaviour
     [SerializeField] private float defaultBarScale;
 
     private float BarCurrentScale => defaultBarScale * ((increaseSizeRemainingDuration > 0) ? GameManager.Instance.IncreaseSizeMultiplier : 1f);
+    private bool IsSticky => stickyRemainingDuration > 0f;
 
     private InputAction moveAction;
-    private InputAction extraAction;
+    private InputAction launchAction;
     private float currentMoveSpeedX;
     private float minDeflectionAngleCos;
     private float increaseSizeRemainingDuration;
     private float stickyRemainingDuration;
     private float shootingWhenHitRemainingDuration;
+    private bool forceLaunchBalls = false;
+    private Dictionary<Ball, Vector3> capturedBalls = new();
 
     private void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
-        extraAction = InputSystem.actions.FindAction("Extra");
+        launchAction = InputSystem.actions.FindAction("Launch");
         currentMoveSpeedX = 0f;
         increaseSizeRemainingDuration = 0f;
         stickyRemainingDuration = 0f;
@@ -47,10 +53,12 @@ public class PlayerBar : MonoBehaviour
         increaseSizeRemainingDuration = Mathf.Max(0f, increaseSizeRemainingDuration - Time.deltaTime);
         shootingWhenHitRemainingDuration = Mathf.Max(0f, shootingWhenHitRemainingDuration - Time.deltaTime);
         UpdateGunStatus();
+        UpdateStickyStatus();
     }
 
     private void FixedUpdate()
     {
+        HandleLaunch();
         UpdateSize();
         Move();
     }
@@ -61,27 +69,6 @@ public class PlayerBar : MonoBehaviour
         if (!buffCollectable) return;
 
         GameManager.Instance.CollectBuff(buffCollectable);
-        /*
-            case BuffTypes.ShootWhenHit:
-                if (CheckBuff(BuffTypes.ShootWhenHit))
-                {
-                    Buff updatedBuff = currentBuffs[BuffTypes.ShootWhenHit];
-                    updatedBuff.duration = buff.duration + (updatedBuff.duration - (Time.time - updatedBuff.applicationTime));
-                    currentBuffs[BuffTypes.ShootWhenHit] = updatedBuff;
-                }
-                else
-                {
-                    buff.applicationTime = Time.time;
-                    currentBuffs.Add(BuffTypes.ShootWhenHit, buff);
-                }
-                break;
-
-            case BuffTypes.InvincibleBall:
-                break;
-        }
-
-        Destroy(buffCollectable.gameObject);
-        */
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -89,7 +76,10 @@ public class PlayerBar : MonoBehaviour
         Ball ball = Ball.GetBall(collision.collider);
         if (!ball) return;
 
-        DeflectBall(ball);
+        if (ball.RB.position.y <= transform.position.y) return;
+
+        if (!IsSticky) DeflectBall(ball);
+        else CaptureBall(ball);
 
         if (shootingWhenHitRemainingDuration > 0f)
         {
@@ -137,9 +127,12 @@ public class PlayerBar : MonoBehaviour
 
     private void UpdateSize()
     {
+        if (Mathf.Approximately(barTransform.localScale.x, BarCurrentScale)) return;
+
         barTransform.localScale = new Vector3(BarCurrentScale, barTransform.localScale.y, 1f);
         leftGun.transform.position = leftGunPivot.position;
         rightGun.transform.position = rightGunPivot.position;
+        forceLaunchBalls = true;
     }
 
     private void UpdateGunStatus()
@@ -154,6 +147,27 @@ public class PlayerBar : MonoBehaviour
         }
     }
 
+    private void UpdateStickyStatus()
+    {
+        if (IsSticky == stickyRenderer.enabled) return;
+
+        stickyRenderer.enabled = IsSticky;
+        forceLaunchBalls = true;
+    }
+
+    private void HandleLaunch()
+    {
+        if (!launchAction.IsPressed() && !forceLaunchBalls) return;
+
+        foreach (Ball ball in capturedBalls.Keys)
+        {
+            GameManager.Instance.LaunchBall(ball, capturedBalls[ball]);
+        }
+
+        capturedBalls.Clear();
+        forceLaunchBalls = false;
+    }
+
     private void Move()
     {
         float moveValue = moveAction.ReadValue<float>();
@@ -163,11 +177,27 @@ public class PlayerBar : MonoBehaviour
         RB.MovePosition(new Vector2(targetXPosition, RB.position.y));
     }
 
+    public void CaptureBall(Ball ball)
+    {
+        Vector2 contactPoint = ball.RB.position - ball.RB.linearVelocity * Time.fixedDeltaTime;
+        float contactNormalizedPosition = GetLocalBarPositionForCollision(ball.RB.position.x);
+        float deflectionAngleCos = contactNormalizedPosition;
+
+        ball.RB.linearVelocity = Vector3.zero;
+        ball.RB.simulated = false;
+        ball.transform.SetParent(transform, true);
+        ball.transform.position = contactPoint;
+        ball.SetStickyState(IsSticky);
+
+        capturedBalls.Add(ball, GetDeflectionDirection(deflectionAngleCos));
+    }
+
     private void DeflectBall(Ball ball)
     {
         float speed = ball.RB.linearVelocity.magnitude;
         float contactNormalizedPosition = GetLocalBarPositionForCollision(ball.RB.position.x);
         float deflectionAngleCos = contactNormalizedPosition;
+
         ball.RB.linearVelocity = Mathf.Min(speed, ball.MaxSpeed) * GetDeflectionDirection(deflectionAngleCos);
     }
 
