@@ -7,6 +7,7 @@ using System.Linq;
 using UnityEditor;
 using TMPro;
 using System;
+#if UNITY_EDITOR
 
 public class LevelEditor : MonoBehaviour
 {
@@ -325,3 +326,4 @@ public class LevelEditor : MonoBehaviour
         operationFeedback.text = "";
     }
 }
+#endif

@@ -43,7 +43,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -60,12 +60,12 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
+                    "name": "1D Axis",
                     "id": "247c15ea-697c-4645-9edd-6293b951d386",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Launch",
                     "isComposite": false,
                     "isPartOfComposite": false

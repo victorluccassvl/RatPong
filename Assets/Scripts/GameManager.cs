@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using Unity.AppUI.Core;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour

@@ -48,6 +48,7 @@ public class LevelData : ScriptableObject, ISerializationCallbackReceiver
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(LevelData)), CanEditMultipleObjects]
 public class LevelDataEditor : Editor
 {
@@ -58,3 +59,4 @@ public class LevelDataEditor : Editor
         LevelData myScript = (LevelData)target;
     }
 }
+#endif

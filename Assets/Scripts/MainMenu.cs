@@ -44,6 +44,7 @@ public class MainMenu : MonoBehaviour
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(MainMenu))]
 public class MainMenuEditor : Editor
 {
@@ -58,3 +59,4 @@ public class MainMenuEditor : Editor
         }
     }
 }
+#endif

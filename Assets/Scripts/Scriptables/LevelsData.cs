@@ -11,6 +11,7 @@ public class LevelsData : ScriptableObject
     public List<LevelData> levels;
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(LevelsData))]
 public class LevelsDataEditor : Editor
 {
@@ -21,3 +22,4 @@ public class LevelsDataEditor : Editor
         LevelsData myScript = (LevelsData)target;
     }
 }
+#endif
