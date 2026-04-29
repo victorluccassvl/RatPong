@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: dbefa2fdcd4fae949a9b564545216fa9
+guid: 41b9658169bcb634191be6bb69f5ee94
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1378521658571115459
-    second: Crown_0
+      213: 1862017918923406894
+    second: SPR_VolumeIcon_0
+  - first:
+      213: 3692659671017625406
+    second: SPR_VolumeIcon_1
+  - first:
+      213: 769517777336220867
+    second: SPR_VolumeIcon_2
+  - first:
+      213: 4101023344139421265
+    second: SPR_VolumeIcon_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,14 +55,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -96,17 +105,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crown_0
+      name: SPR_VolumeIcon_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 80
-        width: 246
-        height: 154
+        x: 0
+        y: 66
+        width: 233
+        height: 381
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d34bfa1fad18edce0800000000000000
-      internalID: -1378521658571115459
+      spriteID: e2e77de8e6737d910800000000000000
+      internalID: 1862017918923406894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_VolumeIcon_1
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 139
+        width: 80
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e379a6ff766fe3330800000000000000
+      internalID: 3692659671017625406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_VolumeIcon_2
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 81
+        width: 104
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc39766750edaa00800000000000000
+      internalID: 769517777336220867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_VolumeIcon_3
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 23
+        width: 126
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156c30bd003c9e830800000000000000
+      internalID: 4101023344139421265
       vertices: []
       indices: 
       edges: []
@@ -125,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Crown_0: -1378521658571115459
+      SPR_VolumeIcon_0: 1862017918923406894
+      SPR_VolumeIcon_1: 3692659671017625406
+      SPR_VolumeIcon_2: 769517777336220867
+      SPR_VolumeIcon_3: 4101023344139421265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

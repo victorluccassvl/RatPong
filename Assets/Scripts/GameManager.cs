@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     [Header("General Settings")]
     [SerializeField] private float ballSpawnOffset;
+    [SerializeField] private string musicID;
 
     [Header("Buffs Settings")]
     [SerializeField] private float increaseSizeDuration;
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         InitializeLevel();
+        AudioManager.Instance.PlayMusic(musicID);
     }
 
     private void InitializeLevel()

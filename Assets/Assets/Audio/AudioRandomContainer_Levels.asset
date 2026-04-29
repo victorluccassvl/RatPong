@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-5584527811856177684
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_LevelVersion3_{-5584527811856177684}
+  m_AudioClip: {fileID: 8300000, guid: 0bd0b8d967091e449a48f5d21d982162, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3929547375610431327
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_LevelVersion1_{-3929547375610431327}
+  m_AudioClip: {fileID: 8300000, guid: 8c47bd922fea07845a22d8b5051f1705, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1759313289632105011
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_LevelVersion2_{-1759313289632105011}
+  m_AudioClip: {fileID: 8300000, guid: b68fc0ccae24dce40bbdf22ea3d40a61, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1124063351551783627
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_LevelVersion4_{-1124063351551783627}
+  m_AudioClip: {fileID: 8300000, guid: 0c266b0275a2f4c429b23030b60cbb37, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2855860648488795746
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_LevelVersion5_{2855860648488795746}
+  m_AudioClip: {fileID: 8300000, guid: 2cdd09b5b77edd34abbb16e21b2f75d6, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AudioRandomContainer_Levels
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: 0, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -3929547375610431327}
+  - {fileID: -1759313289632105011}
+  - {fileID: -5584527811856177684}
+  - {fileID: -1124063351551783627}
+  - {fileID: 2855860648488795746}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 0
+  m_TriggerMode: 1
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 0
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0

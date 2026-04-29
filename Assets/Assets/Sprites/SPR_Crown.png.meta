@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 44f6c6dd7e5bec74cb8d509863bec589
+guid: dbefa2fdcd4fae949a9b564545216fa9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2688039948974600898
-    second: GameLogo 1_0
-  - first:
-      213: 5479720686139296515
-    second: GameLogo 1_1
-  - first:
-      213: 1471242569381860874
-    second: GameLogo 1_2
+      213: -1378521658571115459
+    second: Crown_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,14 +46,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -78,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -102,39 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GameLogo 1_0
+      name: Crown_0
       rect:
         serializedVersion: 2
-        x: 442
-        y: 86
-        width: 176
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c2b0bc7716dd4520800000000000000
-      internalID: 2688039948974600898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameLogo 1_1
-      rect:
-        serializedVersion: 2
-        x: 498
+        x: 5
         y: 80
-        width: 1031
-        height: 1926
+        width: 246
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 30b41b56ee0eb0c40800000000000000
-      internalID: 5479720686139296515
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GameLogo 1_2
-      rect:
-        serializedVersion: 2
-        x: 1502
-        y: 86
-        width: 162
-        height: 384
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a0650766257ea6410800000000000000
-      internalID: 1471242569381860874
+      spriteID: d34bfa1fad18edce0800000000000000
+      internalID: -1378521658571115459
       vertices: []
       indices: 
       edges: []
@@ -175,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GameLogo 1_0: 2688039948974600898
-      GameLogo 1_1: 5479720686139296515
-      GameLogo 1_2: 1471242569381860874
+      Crown_0: -1378521658571115459
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

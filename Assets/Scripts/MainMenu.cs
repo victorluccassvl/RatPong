@@ -10,8 +10,16 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private ScrollRect levelsScrollRect;
 
     [SerializeField] private LevelSelectButton levelButtonPrefab;
+    [SerializeField] private string musicID;
 
     public void Awake() => UpdateLevelsList();
+
+    public void Start()
+    {
+        float normalizedVolume = PlayerPrefs.HasKey("NormalizedVolume") ? PlayerPrefs.GetFloat("NormalizedVolume") : 1f;
+        AudioManager.Instance.SetVolume(normalizedVolume);
+        AudioManager.Instance.PlayMusic(musicID);
+    }
 
     public void CloseGame()
     {
