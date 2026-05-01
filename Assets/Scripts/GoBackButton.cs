@@ -4,6 +4,6 @@ public class GoBackButton : MonoBehaviour
 {
     public void GoBack()
     {
-        SceneManager.Instance.GoToMainMenu();
+        GameManager.Instance.ExplicitOpenEndGamePopUp();
     }
 }

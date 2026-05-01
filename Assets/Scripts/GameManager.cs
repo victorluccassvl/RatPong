@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,10 +15,15 @@ public class GameManager : MonoBehaviour
     [Header("Scene References")]
     [SerializeField] private Transform ballsParent;
     [SerializeField] private TilesSpace tilesSpace;
+    [SerializeField] private TextMeshProUGUI destroyedTilesScore;
+    [SerializeField] private TextMeshProUGUI destructibleTilesScore;
+    [SerializeField] private DualChoicePopUp endGamePopUp;
     [field: SerializeField] public PlayerBar PlayerBar { get; private set; }
 
     [Header("General Settings")]
     [SerializeField] private float ballSpawnOffset;
+    [SerializeField] private Color defeatMessageColor;
+    [SerializeField] private Color victoryMessageColor;
     [SerializeField] private string musicID;
 
     [Header("Buffs Settings")]
@@ -31,6 +39,8 @@ public class GameManager : MonoBehaviour
     private List<Ball> balls = new();
     private Tile[,] tiles = null;
     private int destructibleTilesCount = 0;
+    private int destroyedTiles = 0;
+    private InputAction openMenuAction;
 
     private void Awake()
     {
@@ -49,6 +59,24 @@ public class GameManager : MonoBehaviour
     {
         InitializeLevel();
         AudioManager.Instance.PlayMusic(musicID);
+        openMenuAction = InputSystem.actions.FindAction("Exit");
+        openMenuAction.performed += ExplicitOpenEndGamePopUp;
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance != this) return;
+
+        foreach (Ball ball in balls) ball.OnBallDestroyed -= OnBallDestroyed;
+        for (int column = 0; column < tiles.GetLength(0); column++)
+        {
+            for (int line = 0; line < tiles.GetLength(1); line++)
+            {
+                if (tiles[column, line] == null) continue;
+                tiles[column, line].OnTileDestroyed -= OnTileDestroyed;
+            }
+        }
+        openMenuAction.performed -= ExplicitOpenEndGamePopUp;
     }
 
     private void InitializeLevel()
@@ -79,6 +107,10 @@ public class GameManager : MonoBehaviour
                 tiles[column, line] = newTile;
             }
         }
+
+        destroyedTiles = 0;
+        destroyedTilesScore.text = destroyedTiles.ToString();
+        destructibleTilesScore.text = "/" + destructibleTilesCount.ToString();
     }
 
     public void SpawnBall(uint amount = 1, bool spawnsCaptured = false)
@@ -133,15 +165,33 @@ public class GameManager : MonoBehaviour
         Destroy(buffCollectable.gameObject);
     }
 
+    public void ExplicitOpenEndGamePopUp(InputAction.CallbackContext context) => ExplicitOpenEndGamePopUp();
+    public void ExplicitOpenEndGamePopUp()
+    {
+        DualChoicePopUp.Settings settings = new();
+        settings.message = "Exit Level?";
+        settings.leftButtonLabel = "No";
+        settings.rightButtonLabel = "Yes";
+        endGamePopUp.Open(settings, OnGoBackPopUpCancel, GoBackToMainMenu);
+    }
+    private void OnGoBackPopUpCancel() => endGamePopUp.Close();
+    private void GoBackToMainMenu() => SceneManager.Instance.GoToMainMenu();
+    private void RetryLevel() => SceneManager.Instance.ReloadLevel();
+
     private void OnBallDestroyed(Ball ball)
     {
         ball.OnBallDestroyed -= OnBallDestroyed;
         balls.Remove(ball);
 
-        if (balls.Count == 0)
+        // Defeat
+        if (balls.Count == 0 && gameObject.scene.isLoaded)
         {
-            // Derrota
-            SceneManager.Instance.GoToMainMenu();
+            DualChoicePopUp.Settings settings = new();
+            settings.message = "Defeat";
+            settings.messageColor = defeatMessageColor;
+            settings.leftButtonLabel = "Retry";
+            settings.rightButtonLabel = "Go to Main Menu";
+            endGamePopUp.Open(settings, RetryLevel, GoBackToMainMenu);
         }
     }
 
@@ -151,17 +201,27 @@ public class GameManager : MonoBehaviour
 
         tile.OnTileDestroyed -= OnTileDestroyed;
         tiles[position.x, position.y] = null;
-        destructibleTilesCount--;
+        destroyedTiles++;
+        destroyedTilesScore.text = destroyedTiles.ToString();
 
-        if (destructibleTilesCount <= 0)
+        // Victory
+        if (destroyedTiles >= destructibleTilesCount)
         {
-            // Vitoria
             PlayerPrefs.SetString(SceneManager.Instance.CurrentLevel.ID, "");
             PlayerPrefs.Save();
-            SceneManager.Instance.GoToMainMenu();
+            DualChoicePopUp.Settings settings = new();
+            settings.message = "Victory!";
+            settings.messageColor = victoryMessageColor;
+            settings.leftButtonLabel = "Play Again";
+            settings.rightButtonLabel = "Go to  Main Menu";
+            endGamePopUp.Open(settings, RetryLevel, GoBackToMainMenu);
             return;
         }
+        ApplyDestructionEffects(position, destroyEffect);
+    }
 
+    private void ApplyDestructionEffects(Vector2Int position, Tile.DamageEffect destroyEffect)
+    {
         bool stop = false;
         bool destroyLine = (destroyEffect & Tile.DamageEffect.DamageLine) != 0;
         bool destroyColumn = (destroyEffect & Tile.DamageEffect.DamageColumn) != 0;

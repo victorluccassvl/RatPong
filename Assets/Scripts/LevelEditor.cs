@@ -47,7 +47,7 @@ public class LevelEditor : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentPickedLabel;
 
     [Header("PopUp")]
-    [SerializeField] private ConfirmationPopUp confirmationPopUp;
+    [SerializeField] private DualChoicePopUp confirmationPopUp;
 
 
     private EditableTile[,] editableTiles = null;
@@ -127,7 +127,7 @@ public class LevelEditor : MonoBehaviour
             DisplayOperationFeedback(OperationFeedback.LevelDeleted, levelToDeleteID);
         };
 
-        confirmationPopUp.Open($"Are you sure you want to delete level {currentLevelData.ID}?", confirmDeletion, null);
+        confirmationPopUp.Open($"Are you sure you want to delete level {currentLevelData.ID}?", null, confirmDeletion);
     }
 
     private void OnCreate()

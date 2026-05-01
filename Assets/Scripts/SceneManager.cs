@@ -41,6 +41,11 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Game", LoadSceneMode.Single);
     }
 
+    public void ReloadLevel()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Game", LoadSceneMode.Single);
+    }
+
     private Coroutine goToMainMenuCoroutine = null;
     private IEnumerator GoToMainMenuRoutine(float delay = 0f)
     {
