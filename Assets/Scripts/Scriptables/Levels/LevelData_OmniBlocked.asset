@@ -1,0 +1,506 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5deadbf45d5557945989ab9a3f118e8e, type: 3}
+  m_Name: LevelData_OmniBlocked
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  enabled: 1
+  ID: Level_OmniBlocked
+  tilesSerialized:
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: DropBuffTile_Sticky
+    levelEditorRepresentation: {fileID: -193131172776958164, guid: 92d65497ff76f3944bdd8759de5f80ed, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 4fd93594625069e4b8721ce0e15be2f4, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DropBuffTile_IncreaseSize
+    levelEditorRepresentation: {fileID: -3933905775947423483, guid: 59bf9055d2376ce4084ee97eb4bdd9e0, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 86ecfed1ab177104f86d65dd1d43624e, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DropBuffTile_ShootWhenHit
+    levelEditorRepresentation: {fileID: 499143971454744469, guid: ac5d75f91600710468504737074393ab, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 06c8e9bf0f17edb4c83dfc498f46fe09, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DropBuffTile_IncreaseSize
+    levelEditorRepresentation: {fileID: -3933905775947423483, guid: 59bf9055d2376ce4084ee97eb4bdd9e0, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 86ecfed1ab177104f86d65dd1d43624e, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DropBuffTile_SpawnBalls
+    levelEditorRepresentation: {fileID: 3762010019991560072, guid: 89b821a5b70572e42a6050a22c486279, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: d3257f95b84b6264cb8dabe60bab9b5f, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: DropBuffTile_Sticky
+    levelEditorRepresentation: {fileID: -193131172776958164, guid: 92d65497ff76f3944bdd8759de5f80ed, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 4fd93594625069e4b8721ce0e15be2f4, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: DropBuffTile_IncreaseSize
+    levelEditorRepresentation: {fileID: -3933905775947423483, guid: 59bf9055d2376ce4084ee97eb4bdd9e0, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 86ecfed1ab177104f86d65dd1d43624e, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DropBuffTile_ShootWhenHit
+    levelEditorRepresentation: {fileID: 499143971454744469, guid: ac5d75f91600710468504737074393ab, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 06c8e9bf0f17edb4c83dfc498f46fe09, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DropBuffTile_ShootWhenHit
+    levelEditorRepresentation: {fileID: 499143971454744469, guid: ac5d75f91600710468504737074393ab, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 06c8e9bf0f17edb4c83dfc498f46fe09, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: DropBuffTile_SpawnBalls
+    levelEditorRepresentation: {fileID: 3762010019991560072, guid: 89b821a5b70572e42a6050a22c486279, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: d3257f95b84b6264cb8dabe60bab9b5f, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: DropBuffTile_Sticky
+    levelEditorRepresentation: {fileID: -193131172776958164, guid: 92d65497ff76f3944bdd8759de5f80ed, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 4fd93594625069e4b8721ce0e15be2f4, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: DropBuffTile_SpawnBalls
+    levelEditorRepresentation: {fileID: 3762010019991560072, guid: 89b821a5b70572e42a6050a22c486279, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: d3257f95b84b6264cb8dabe60bab9b5f, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: DropBuffTile_Sticky
+    levelEditorRepresentation: {fileID: -193131172776958164, guid: 92d65497ff76f3944bdd8759de5f80ed, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 4fd93594625069e4b8721ce0e15be2f4, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: DamageAllTile
+    levelEditorRepresentation: {fileID: 8335176703861483192, guid: 3748ac31b4737094e8e2f8be212b1eca, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: eb1dd7d2372bc2b4d86939d9ac633ee6, type: 3}
+  - ID: DamageAllTile
+    levelEditorRepresentation: {fileID: 8335176703861483192, guid: 3748ac31b4737094e8e2f8be212b1eca, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: eb1dd7d2372bc2b4d86939d9ac633ee6, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: DropBuffTile_SpawnBalls
+    levelEditorRepresentation: {fileID: 3762010019991560072, guid: 89b821a5b70572e42a6050a22c486279, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: d3257f95b84b6264cb8dabe60bab9b5f, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: DropBuffTile_Sticky
+    levelEditorRepresentation: {fileID: -193131172776958164, guid: 92d65497ff76f3944bdd8759de5f80ed, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 4fd93594625069e4b8721ce0e15be2f4, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: DamageAllTile
+    levelEditorRepresentation: {fileID: 8335176703861483192, guid: 3748ac31b4737094e8e2f8be212b1eca, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: eb1dd7d2372bc2b4d86939d9ac633ee6, type: 3}
+  - ID: DamageAllTile
+    levelEditorRepresentation: {fileID: 8335176703861483192, guid: 3748ac31b4737094e8e2f8be212b1eca, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: eb1dd7d2372bc2b4d86939d9ac633ee6, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: DropBuffTile_SpawnBalls
+    levelEditorRepresentation: {fileID: 3762010019991560072, guid: 89b821a5b70572e42a6050a22c486279, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: d3257f95b84b6264cb8dabe60bab9b5f, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: DropBuffTile_Sticky
+    levelEditorRepresentation: {fileID: -193131172776958164, guid: 92d65497ff76f3944bdd8759de5f80ed, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 4fd93594625069e4b8721ce0e15be2f4, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: DropBuffTile_SpawnBalls
+    levelEditorRepresentation: {fileID: 3762010019991560072, guid: 89b821a5b70572e42a6050a22c486279, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: d3257f95b84b6264cb8dabe60bab9b5f, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: DropBuffTile_Sticky
+    levelEditorRepresentation: {fileID: -193131172776958164, guid: 92d65497ff76f3944bdd8759de5f80ed, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 4fd93594625069e4b8721ce0e15be2f4, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: DropBuffTile_IncreaseSize
+    levelEditorRepresentation: {fileID: -3933905775947423483, guid: 59bf9055d2376ce4084ee97eb4bdd9e0, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 86ecfed1ab177104f86d65dd1d43624e, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DropBuffTile_InvincibleBall
+    levelEditorRepresentation: {fileID: -3726998581362440528, guid: 5e86d09434d5fa04485fe11da39a5acd, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 1e849e4e26eacf34987ed6f476926367, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DropBuffTile_InvincibleBall
+    levelEditorRepresentation: {fileID: -3726998581362440528, guid: 5e86d09434d5fa04485fe11da39a5acd, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 1e849e4e26eacf34987ed6f476926367, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: DropBuffTile_SpawnBalls
+    levelEditorRepresentation: {fileID: 3762010019991560072, guid: 89b821a5b70572e42a6050a22c486279, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: d3257f95b84b6264cb8dabe60bab9b5f, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: DropBuffTile_Sticky
+    levelEditorRepresentation: {fileID: -193131172776958164, guid: 92d65497ff76f3944bdd8759de5f80ed, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 4fd93594625069e4b8721ce0e15be2f4, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DropBuffTile_IncreaseSize
+    levelEditorRepresentation: {fileID: -3933905775947423483, guid: 59bf9055d2376ce4084ee97eb4bdd9e0, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 86ecfed1ab177104f86d65dd1d43624e, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DropBuffTile_InvincibleBall
+    levelEditorRepresentation: {fileID: -3726998581362440528, guid: 5e86d09434d5fa04485fe11da39a5acd, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 1e849e4e26eacf34987ed6f476926367, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DropBuffTile_IncreaseSize
+    levelEditorRepresentation: {fileID: -3933905775947423483, guid: 59bf9055d2376ce4084ee97eb4bdd9e0, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 86ecfed1ab177104f86d65dd1d43624e, type: 3}
+  - ID: BulkyTile
+    levelEditorRepresentation: {fileID: 4822591293210097152, guid: eff434b32e4790e47978a5603ea9ff36, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 12a63e1b9f1d2da4d8baa657e2f5289f, type: 3}
+  - ID: DropBuffTile_SpawnBalls
+    levelEditorRepresentation: {fileID: 3762010019991560072, guid: 89b821a5b70572e42a6050a22c486279, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: d3257f95b84b6264cb8dabe60bab9b5f, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: InvulnerableTile
+    levelEditorRepresentation: {fileID: -2863253570389345658, guid: f7ef00d8b95c9dd4a8acae44e194b8ef, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: 15c45eb7b0b914142808f7bbfbaf70ce, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  - ID: CommonTile
+    levelEditorRepresentation: {fileID: -8784506617716739680, guid: 184f2213506957644b97b482770654df, type: 3}
+    prefab: {fileID: 6323504698033334984, guid: b0155d2ebd1b7e24183194f3f7ea5185, type: 3}
+  tilesSerializedPosition:
+  - {x: 0, y: 0}
+  - {x: 0, y: 1}
+  - {x: 0, y: 6}
+  - {x: 0, y: 7}
+  - {x: 1, y: 0}
+  - {x: 1, y: 1}
+  - {x: 1, y: 2}
+  - {x: 1, y: 3}
+  - {x: 1, y: 4}
+  - {x: 1, y: 5}
+  - {x: 1, y: 6}
+  - {x: 1, y: 7}
+  - {x: 1, y: 8}
+  - {x: 1, y: 9}
+  - {x: 1, y: 10}
+  - {x: 1, y: 11}
+  - {x: 2, y: 0}
+  - {x: 2, y: 1}
+  - {x: 2, y: 2}
+  - {x: 2, y: 3}
+  - {x: 2, y: 4}
+  - {x: 2, y: 5}
+  - {x: 2, y: 6}
+  - {x: 2, y: 7}
+  - {x: 2, y: 8}
+  - {x: 2, y: 9}
+  - {x: 2, y: 10}
+  - {x: 3, y: 0}
+  - {x: 3, y: 1}
+  - {x: 3, y: 2}
+  - {x: 3, y: 3}
+  - {x: 3, y: 4}
+  - {x: 3, y: 5}
+  - {x: 3, y: 6}
+  - {x: 3, y: 7}
+  - {x: 3, y: 8}
+  - {x: 3, y: 9}
+  - {x: 3, y: 10}
+  - {x: 4, y: 0}
+  - {x: 4, y: 1}
+  - {x: 4, y: 2}
+  - {x: 4, y: 3}
+  - {x: 4, y: 4}
+  - {x: 4, y: 5}
+  - {x: 4, y: 6}
+  - {x: 4, y: 7}
+  - {x: 4, y: 8}
+  - {x: 4, y: 9}
+  - {x: 4, y: 10}
+  - {x: 5, y: 0}
+  - {x: 5, y: 1}
+  - {x: 5, y: 2}
+  - {x: 5, y: 3}
+  - {x: 5, y: 4}
+  - {x: 5, y: 5}
+  - {x: 5, y: 6}
+  - {x: 5, y: 7}
+  - {x: 5, y: 8}
+  - {x: 5, y: 9}
+  - {x: 5, y: 10}
+  - {x: 5, y: 11}
+  - {x: 6, y: 0}
+  - {x: 6, y: 1}
+  - {x: 6, y: 2}
+  - {x: 6, y: 3}
+  - {x: 6, y: 4}
+  - {x: 6, y: 5}
+  - {x: 6, y: 6}
+  - {x: 6, y: 7}
+  - {x: 6, y: 8}
+  - {x: 6, y: 9}
+  - {x: 6, y: 10}
+  - {x: 6, y: 11}
+  - {x: 7, y: 0}
+  - {x: 7, y: 1}
+  - {x: 7, y: 2}
+  - {x: 7, y: 3}
+  - {x: 7, y: 4}
+  - {x: 7, y: 5}
+  - {x: 7, y: 6}
+  - {x: 7, y: 7}
+  - {x: 7, y: 8}
+  - {x: 7, y: 9}
+  - {x: 7, y: 10}
+  - {x: 8, y: 0}
+  - {x: 8, y: 1}
+  - {x: 8, y: 2}
+  - {x: 8, y: 3}
+  - {x: 8, y: 4}
+  - {x: 8, y: 5}
+  - {x: 8, y: 6}
+  - {x: 8, y: 7}
+  - {x: 8, y: 8}
+  - {x: 8, y: 9}
+  - {x: 8, y: 10}
+  - {x: 9, y: 0}
+  - {x: 9, y: 1}
+  - {x: 9, y: 2}
+  - {x: 9, y: 3}
+  - {x: 9, y: 4}
+  - {x: 9, y: 5}
+  - {x: 9, y: 6}
+  - {x: 9, y: 7}
+  - {x: 9, y: 8}
+  - {x: 9, y: 9}
+  - {x: 9, y: 10}
+  - {x: 10, y: 0}
+  - {x: 10, y: 1}
+  - {x: 10, y: 2}
+  - {x: 10, y: 3}
+  - {x: 10, y: 4}
+  - {x: 10, y: 5}
+  - {x: 10, y: 6}
+  - {x: 10, y: 7}
+  - {x: 10, y: 8}
+  - {x: 10, y: 9}
+  - {x: 10, y: 10}
+  - {x: 10, y: 11}
+  - {x: 11, y: 0}
+  - {x: 11, y: 1}
+  - {x: 11, y: 6}
+  - {x: 11, y: 7}

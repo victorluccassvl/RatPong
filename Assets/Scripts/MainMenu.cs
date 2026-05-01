@@ -38,10 +38,9 @@ public class MainMenu : MonoBehaviour
             return;
         }
 
-        for (int i = 0; i < levelsData.levels.Count; i++)
+        for (int i = 0; i < levelsData.enabledLevels.Count; i++)
         {
-            LevelData level = levelsData.levels[i];
-            if (!level.enabled) continue;
+            LevelData level = levelsData.enabledLevels[i];
 
             bool completed = PlayerPrefs.GetString(level.ID, "NotFound") != "NotFound";
 

@@ -148,7 +148,8 @@ public class LevelEditor : MonoBehaviour
     private void OnLevelSelect(int newOption)
     {
         string newOptionID = levelDropdown.options[newOption].text;
-        currentLevelData = levelsData.levels.Find(levelData => levelData.ID == newOptionID);
+        currentLevelData = levelsData.enabledLevels.Find(levelData => levelData.ID == newOptionID);
+        if (currentLevelData == null) currentLevelData = levelsData.disabledLevels.Find(levelData => levelData.ID == newOptionID);
         UpdateLevelTiles();
         if (newOptionID != DROPDOWN_NULL_OPTION) DisplayOperationFeedback(OperationFeedback.LevelLoaded, newOptionID);
     }
@@ -181,10 +182,8 @@ public class LevelEditor : MonoBehaviour
     {
         levelDropdown.ClearOptions();
         List<string> levelOptions = new() { DROPDOWN_NULL_OPTION };
-        foreach (LevelData levelData in levelsData.levels)
-        {
-            levelOptions.Add(levelData.ID);
-        }
+        foreach (LevelData levelData in levelsData.enabledLevels) levelOptions.Add(levelData.ID);
+        foreach (LevelData levelData in levelsData.disabledLevels) levelOptions.Add(levelData.ID);
 
         levelDropdown.AddOptions(levelOptions);
     }
@@ -195,7 +194,8 @@ public class LevelEditor : MonoBehaviour
 
         List<string> levelPaths = Directory.GetFiles(levelsFolderPath, "*.asset").ToList();
 
-        levelsData.levels.Clear();
+        levelsData.disabledLevels.Clear();
+        levelsData.enabledLevels.Clear();
 
         foreach (string levelPath in levelPaths)
         {
@@ -203,7 +203,8 @@ public class LevelEditor : MonoBehaviour
 
             if (levelDataObject is LevelData levelData)
             {
-                levelsData.levels.Add(levelData);
+                if (levelData.enabled) levelsData.enabledLevels.Add(levelData);
+                else levelsData.disabledLevels.Add(levelData);
             }
             else
             {

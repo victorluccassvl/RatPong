@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9616dc75bcc5f734d85928348bc44fd2, type: 3}
   m_Name: LevelsData
   m_EditorClassIdentifier: Assembly-CSharp::LevelsData
-  levels:
+  disabledLevels:
   - {fileID: 11400000, guid: 5b139156d20a73242ad630389a1d951e, type: 2}
   - {fileID: 11400000, guid: e4fc39c62d5893d4c8d807a9ced7f862, type: 2}
   - {fileID: 11400000, guid: 4ccc0858f6a99ba4d8f4d80d35ca39c3, type: 2}
@@ -24,3 +24,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 69d2e0471bf7fdd47b42ccfb3420117b, type: 2}
   - {fileID: 11400000, guid: fbb9b09c450ff324cac63f016beeec90, type: 2}
   - {fileID: 11400000, guid: 4f3e0ff8061bcc0409aa14716024ccf0, type: 2}
+  enabledLevels:
+  - {fileID: 11400000, guid: 761ecc152a3e48447abc8a1fb7c393da, type: 2}
+  - {fileID: 11400000, guid: e984aece280f2ef47928cb966f594357, type: 2}
+  - {fileID: 11400000, guid: 004bb5b02016a9a49b22fbcdc0af54fd, type: 2}
+  - {fileID: 11400000, guid: 3a7e5e2c88524dd42adad9708c2aec2a, type: 2}
+  - {fileID: 11400000, guid: 7cdbdec21edecbc429a7157d9b317856, type: 2}
+  - {fileID: 11400000, guid: 2b0f74dc2eb3fed4c8b55fdfd3f36189, type: 2}

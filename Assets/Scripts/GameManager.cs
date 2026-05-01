@@ -198,10 +198,11 @@ public class GameManager : MonoBehaviour
     {
         Vector2Int position = tile.GridPosition;
 
+        if (tile.IsDestructible) destroyedTiles++;
+        destroyedTilesScore.text = destroyedTiles.ToString();
+
         tile.OnTileDestroyed -= OnTileDestroyed;
         tiles[position.x, position.y] = null;
-        destroyedTiles++;
-        destroyedTilesScore.text = destroyedTiles.ToString();
 
         // Victory
         if (destroyedTiles >= destructibleTilesCount)

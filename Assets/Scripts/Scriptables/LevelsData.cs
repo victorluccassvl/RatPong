@@ -8,7 +8,9 @@ public class LevelsData : ScriptableObject
     public const int LEVEL_GRID_SIZE_COLUMNS = 12;
     public const int LEVEL_GRID_SIZE_LINES = 12;
 
-    public List<LevelData> levels;
+    public List<LevelData> disabledLevels;
+    public List<LevelData> enabledLevels;
+
 }
 
 #if UNITY_EDITOR

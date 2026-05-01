@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5deadbf45d5557945989ab9a3f118e8e, type: 3}
   m_Name: LevelData_PowerUps
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
-  enabled: 1
+  enabled: 0
   ID: Level_PowerUps
   tilesSerialized:
   - ID: CommonTile
