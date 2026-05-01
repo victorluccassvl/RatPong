@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float increaseSizeDuration;
     [field: SerializeField] public float IncreaseSizeMultiplier { get; private set; }
     [SerializeField] private uint extraBallsSpawned;
-    [SerializeField] private float extraBallsSpawnedLifespam;
     [SerializeField] private float extraBallsSpawnAngle;
     [SerializeField] private float shotWhenHitDuration;
     [SerializeField] private float stickyDuration;

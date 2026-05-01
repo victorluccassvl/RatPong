@@ -58,14 +58,14 @@ MonoBehaviour:
   defeatMessageColor: {r: 0.695, g: 0, b: 0, a: 1}
   victoryMessageColor: {r: 0, g: 0.865, b: 0.023942513, a: 1}
   musicID: Level
-  increaseSizeDuration: 3
+  increaseSizeDuration: 10
   <IncreaseSizeMultiplier>k__BackingField: 1.5
   extraBallsSpawned: 3
   extraBallsSpawnedLifespam: 10
   extraBallsSpawnAngle: 90
   shotWhenHitDuration: 10
-  stickyDuration: 2
-  ballInvincibilityDuration: 5
+  stickyDuration: 10
+  ballInvincibilityDuration: 10
 --- !u!82 &4801058074002560213
 AudioSource:
   m_ObjectHideFlags: 0
