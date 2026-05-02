@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         InitializeLevel();
-        AudioManager.Instance.PlayMusic(musicID);
+        AudioManager.Instance.PlayAudio(musicID);
         openMenuAction = InputSystem.actions.FindAction("Exit");
         openMenuAction.performed += ExplicitOpenEndGamePopUp;
     }
@@ -161,6 +161,8 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
+        AudioManager.Instance.PlayAudio("PowerUp");
+
         Destroy(buffCollectable.gameObject);
     }
 
@@ -185,6 +187,7 @@ public class GameManager : MonoBehaviour
         // Defeat
         if (balls.Count == 0 && gameObject.scene.isLoaded)
         {
+            AudioManager.Instance.PlayAudio("Defeat");
             DualChoicePopUp.Settings settings = new();
             settings.message = "Defeat";
             settings.messageColor = defeatMessageColor;
@@ -207,6 +210,7 @@ public class GameManager : MonoBehaviour
         // Victory
         if (destroyedTiles >= destructibleTilesCount)
         {
+            AudioManager.Instance.PlayAudio("Victory");
             PlayerPrefs.SetString(SceneManager.Instance.CurrentLevel.ID, "");
             PlayerPrefs.Save();
             DualChoicePopUp.Settings settings = new();
@@ -226,6 +230,7 @@ public class GameManager : MonoBehaviour
         bool destroyLine = (destroyEffect & Tile.DamageEffect.DamageLine) != 0;
         bool destroyColumn = (destroyEffect & Tile.DamageEffect.DamageColumn) != 0;
         bool destroyDiagonals = (destroyEffect & Tile.DamageEffect.DamageDiagonals) != 0;
+        if (destroyLine || destroyColumn || destroyDiagonals) AudioManager.Instance.PlayAudio("ExplosiveTileHit");
         for (int i = 1; !stop; i++)
         {
             bool hasUpperLine = position.y + i < LevelsData.LEVEL_GRID_SIZE_LINES;

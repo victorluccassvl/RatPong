@@ -26,6 +26,7 @@ public class LevelSelectButton : MonoBehaviour
             Debug.LogError("Level Button was not setup.");
             return;
         }
+        AudioManager.Instance.PlayAudio("Click");
         SceneManager.Instance.LoadLevel(levelData);
     }
 }

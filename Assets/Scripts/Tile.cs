@@ -103,7 +103,15 @@ public class Tile : MonoBehaviour
                 return;
         }
 
-        if (blocked) return;
+        if (blocked)
+        {
+            AudioManager.Instance.PlayAudio("InvulnerableTileHit");
+            return;
+        }
+        else
+        {
+            AudioManager.Instance.PlayAudio("BasicTileHit");
+        }
 
         hitsReceived++;
         UpdateHits();
@@ -125,7 +133,15 @@ public class Tile : MonoBehaviour
                 return;
         }
 
-        if (blocked) return;
+        if (blocked)
+        {
+            AudioManager.Instance.PlayAudio("InvulnerableTileHit");
+            return;
+        }
+        else
+        {
+            AudioManager.Instance.PlayAudio("BasicTileHit");
+        }
 
         hitsReceived++;
         UpdateHits();
@@ -147,7 +163,15 @@ public class Tile : MonoBehaviour
                 break;
         }
 
-        if (blocked) return;
+        if (blocked)
+        {
+            AudioManager.Instance.PlayAudio("InvulnerableTileHit");
+            return;
+        }
+        else
+        {
+            AudioManager.Instance.PlayAudio("BasicTileHit");
+        }
 
         hitsReceived++;
         UpdateHits();

@@ -10,12 +10,12 @@ public class AudioManager : MonoBehaviour
     {
         public string ID;
         public IAudioGenerator.Serializable audioAsset;
+        public AudioSource source;
     }
 
     public static AudioManager Instance { get; private set; }
 
     [SerializeField] private AudioMixer masterMixer;
-    [SerializeField] private AudioSource musicSource;
 
     [SerializeField] private List<Audio> musics;
     [SerializeField] private List<Audio> sfx;
@@ -40,19 +40,16 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.SetFloat("NormalizedVolume", GetVolume());
     }
 
-    public void PlayMusic(string ID)
+    public void PlayAudio(string ID)
     {
-        Audio music = musics.Find(m => m.ID == ID);
-        if (music == null) return;
+        Audio audio = musics.Find(m => m.ID == ID);
+        if (audio == null) audio = sfx.Find(s => s.ID == ID);
 
-        musicSource.Stop();
-        musicSource.generator = music.audioAsset.definition;
-        musicSource.Play();
-    }
+        if (audio == null) return;
 
-    public void PlaySFX(string ID)
-    {
-
+        audio.source.Stop();
+        audio.source.generator = audio.audioAsset.definition;
+        audio.source.Play();
     }
 
     public void SetVolume(float normalizedVolume)

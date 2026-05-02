@@ -83,6 +83,7 @@ public class PlayerBar : MonoBehaviour
 
         if (shootingWhenHitRemainingDuration > 0f)
         {
+            AudioManager.Instance.PlayAudio("Shoot");
             leftGun.Play();
             rightGun.Play();
         }

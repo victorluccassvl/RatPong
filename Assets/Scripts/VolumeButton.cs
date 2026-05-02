@@ -12,6 +12,7 @@ public class VolumeButton : MonoBehaviour
 
     public void ToggleVolumeBar()
     {
+        AudioManager.Instance.PlayAudio("Click");
         bool isOpen = volumeScroll.gameObject.activeSelf;
 
         volumeScroll.gameObject.SetActive(!isOpen);

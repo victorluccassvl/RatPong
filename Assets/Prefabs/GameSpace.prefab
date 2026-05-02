@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1357749654237004530}
   - component: {fileID: 8619621306907356662}
+  - component: {fileID: 7585227816814138005}
   m_Layer: 8
   m_Name: BallWalls
   m_TagString: Untagged
@@ -78,6 +79,18 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &7585227816814138005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118099292568770836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4ae25c0e84dcd4b961a19808e48b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BallWall
 --- !u!1 &131280888990920431
 GameObject:
   m_ObjectHideFlags: 0

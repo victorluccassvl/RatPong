@@ -18,15 +18,16 @@ public class MainMenu : MonoBehaviour
     {
         float normalizedVolume = PlayerPrefs.HasKey("NormalizedVolume") ? PlayerPrefs.GetFloat("NormalizedVolume") : 1f;
         AudioManager.Instance.SetVolume(normalizedVolume);
-        AudioManager.Instance.PlayMusic(musicID);
+        AudioManager.Instance.PlayAudio(musicID);
     }
 
     public void CloseGame()
     {
+        AudioManager.Instance.PlayAudio("Click");
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
 #else
-    Application.Quit();
+        Application.Quit();
 #endif
     }
 

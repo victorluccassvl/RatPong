@@ -32,12 +32,14 @@ public class DualChoicePopUp : MonoBehaviour
 
     public void LeftButtonConfirm()
     {
+        AudioManager.Instance.PlayAudio("Click");
         leftButtonAction?.Invoke();
         Close();
     }
 
     public void RightButtonConfirm()
     {
+        AudioManager.Instance.PlayAudio("Click");
         rightButtonAction?.Invoke();
         Close();
     }
@@ -45,6 +47,7 @@ public class DualChoicePopUp : MonoBehaviour
     private GameObject previouslySelectedElement = null;
     public void Open(string message, Action leftButtonAction, Action rightButtonAction)
     {
+        AudioManager.Instance.PlayAudio("Click");
         Settings settings = new();
         settings.message = message;
         Open(settings, leftButtonAction, rightButtonAction);
